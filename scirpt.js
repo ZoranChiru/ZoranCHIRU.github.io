@@ -10,6 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
     my = e.clientY
     cursor.style.left = mx + 'px'
     cursor.style.top = my + 'px'
+    cursor.style.opacity = 1
+    ring.style.opacity = 1
   })
 
   function animRing() {
