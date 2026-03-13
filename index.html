@@ -268,8 +268,7 @@
       max-width: 600px;
       position: relative;
       z-index: 2;
-      background: var(--cream);
-      display: inline-block;
+      display: inline;
       padding: 0 8px 0 0;
     }
 
@@ -281,7 +280,7 @@
     .hero-desc {
       font-size: 17px;
       color: var(--muted);
-      max-width: 420px;
+      max-width: 560px;
       line-height: 1.8;
       margin-bottom: 3rem;
       position: relative;
@@ -715,14 +714,8 @@
 
     /* FADE IN */
     .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .fade-in.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
 
     @media (max-width: 768px) {
