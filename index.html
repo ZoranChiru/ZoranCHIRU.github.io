@@ -70,7 +70,7 @@
     .nav-logo span { color: var(--blue); }
     .nav-links { display: flex; gap: 2.5rem; align-items: center; }
     .nav-links a {
-      font-size: 13px; color: var(--muted);
+      font-size: 15px; color: var(--muted);
       text-decoration: none; letter-spacing: 0.06em;
       transition: color 0.2s; position: relative;
     }
@@ -145,7 +145,7 @@
     }
     .hero-name em { font-style: italic; color: var(--blue); }
     .hero-desc {
-      font-size: 15px; color: var(--muted);
+      font-size: 17px; color: var(--muted);
       max-width: 420px; line-height: 1.8;
       margin-bottom: 3rem;
     }
@@ -217,10 +217,10 @@
       font-size: 22px; font-weight: 400;
       color: var(--navy); margin-bottom: 0.75rem;
     }
-    .card-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .card-desc { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
     .card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
     .tag {
-      font-size: 10px; padding: 4px 10px;
+      font-size: 12px; padding: 4px 10px;
       border: 1px solid var(--blue-line-strong);
       color: var(--blue); letter-spacing: 0.05em;
       border-radius: 1px;
@@ -256,7 +256,8 @@
       margin-bottom: 6px;
     }
     .exp-role { font-size: 13px; color: var(--blue); margin-bottom: 10px; letter-spacing: 0.03em; }
-    .exp-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .exp-desc { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    
 
     /* SKILLS */
     .skills-wrap { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1px; background: var(--blue-line); border: 1px solid var(--blue-line-strong); }
@@ -317,6 +318,7 @@
       footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     }
   </style>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -339,7 +341,7 @@
   <div class="hero-avatar-wrap" id="avatarWrap">
     <div class="hero-avatar-ring"></div>
     <div class="hero-avatar">
-      <div class="avatar-initials" id="avatarInitials">ZC</div>
+      <img src="assets/images/photo.png" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
     </div>
   </div>
   <div class="hero-tag">Ingénieur systèmes embarqués</div>
@@ -553,54 +555,5 @@
   <p>Caen, Normandie</p>
 </footer>
 
-<script>
-// Cursor
-const cursor = document.getElementById('cursor')
-const ring = document.getElementById('cursorRing')
-let mx = 0, my = 0, rx = 0, ry = 0
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY
-  cursor.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`
-})
-
-function animRing() {
-  rx += (mx - rx) * 0.12
-  ry += (my - ry) *.12
-  ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`
-  requestAnimationFrame(animRing)
-}
-animRing()
-
-document.querySelectorAll('a, button, .project-card, .contact-link').forEach(el => {
-  el.addEventListener('mouseenter', () => ring.classList.add('hover'))
-  el.addEventListener('mouseleave', () => ring.classList.remove('hover'))
-})
-
-// Avatar suit la souris
-const avatarInitials = document.getElementById('avatarInitials')
-const avatarWrap = document.getElementById('avatarWrap')
-if (avatarWrap) {
-  document.addEventListener('mousemove', e => {
-    const rect = avatarWrap.getBoundingClientRect()
-    const cx = rect.left + rect.width / 2
-    const cy = rect.top + rect.height / 2
-    const dx = (e.clientX - cx) / window.innerWidth * 18
-    const dy = (e.clientY - cy) / window.innerHeight * 18
-    avatarInitials.style.transform = `translate(${dx}px, ${dy}px)`
-  })
-}
-
-// Fade in on scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 80)
-    }
-  })
-}, { threshold: 0.1 })
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
-</script>
 </body>
 </html>
