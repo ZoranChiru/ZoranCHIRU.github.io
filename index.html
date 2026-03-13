@@ -14,7 +14,7 @@
       --navy2: #162236;
       --navy3: #1E3050;
       --blue: #1A3A6B;
-      --blue-line: rgba(26,58,107,0.25);
+      --blue-line: rgba(26,58,107,0.35);
       --blue-line-strong: rgba(26,58,107,0.6);
       --text: #0D1B2A;
       --muted: #6B7A8D;
@@ -27,13 +27,13 @@
       background: var(--cream);
       color: var(--text);
       overflow-x: hidden;
-      cursor: none;
+      cursor: none !important;
     }
 
     /* CUSTOM CURSOR */
     .cursor {
       position: fixed; top: 0; left: 0;
-      width: 10px; height: 10px;
+      width: 12px; height: 12px;
       background: var(--blue);
       border-radius: 50%;
       pointer-events: none;
@@ -94,7 +94,7 @@
       background-image:
         linear-gradient(var(--blue-line) 1px, transparent 1px),
         linear-gradient(90deg, var(--blue-line) 1px, transparent 1px);
-      background-size: 80px 80px;
+      background-size: 65px 65px;
       mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
     }
     .hero-avatar-wrap {
