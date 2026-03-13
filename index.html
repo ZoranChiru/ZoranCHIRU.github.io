@@ -14,7 +14,7 @@
       --navy2: #162236;
       --navy3: #1E3050;
       --blue: #1A3A6B;
-      --blue-line: rgba(26,58,107,0.35);
+      --blue-line: rgba(26,58,107,0.4);
       --blue-line-strong: rgba(26,58,107,0.6);
       --text: #0D1B2A;
       --muted: #6B7A8D;
@@ -32,24 +32,23 @@
 
     /* CUSTOM CURSOR */
     .cursor {
-      position: fixed; top: 0; left: 0;
+      position: fixed;
       width: 12px; height: 12px;
       background: var(--blue);
       border-radius: 50%;
       pointer-events: none;
       z-index: 9999;
-      transition: transform 0.15s ease;
-      transform: translate(-50%, -50%);
+      margin-left: -6px; margin-top: -6px;
     }
     .cursor-ring {
-      position: fixed; top: 0; left: 0;
+      position: fixed;
       width: 36px; height: 36px;
       border: 1px solid var(--blue-line-strong);
       border-radius: 50%;
       pointer-events: none;
       z-index: 9998;
-      transition: transform 0.08s ease, width 0.2s, height 0.2s, opacity 0.2s;
-      transform: translate(-50%, -50%);
+      transition: width 0.2s, height 0.2s, opacity 0.2s;
+      margin-left: -18px; margin-top: -18px;
     }
     .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.5; }
 
@@ -92,9 +91,9 @@
     .hero-grid-lines {
       position: absolute; inset: 0; pointer-events: none;
       background-image:
-        linear-gradient(var(--blue-line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--blue-line) 1px, transparent 1px);
-      background-size: 65px 65px;
+        linear-gradient(var(--blue-line) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, var(--blue-line) 1.5px, transparent 1.5px);
+      background-size: 120px 120px;
       mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
     }
     .hero-avatar-wrap {
