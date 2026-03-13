@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Ecrit le mot</title>
+    <script src="script.js" defer></script>
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Jeu d'écrire le mot</h1>
+        <h2>Le but du jeu est d'écrire le mot qui s'affiche à l'écran.</h2>
+    </header>
+
+    <main>
+        <div class="zoneProposition">
+            <p>Mot à écrire : <span id="motAAfficher"></span></p>
+        </div>
+
+        <div class="entree">
+            <input type="text" id="MotUtilisateur" placeholder="Ecrivez le mot ici">
+            <button id="btnvalider">
+                Valider
+            </button>
+        </div>
+
+        <div class="zoneResultat">
+                Résultat : <span id="resultat"></span>
+        </div>
+
+    </main>
+</body>
+</html>
+
