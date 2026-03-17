@@ -724,6 +724,100 @@
       transform: translateY(0);
     }
 
+    /* CHIP SECTION */
+    .chip-section {
+      min-height: 80vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 4rem 2rem;
+      background: var(--cream2);
+      border-bottom: 1px solid var(--blue-line);
+    }
+
+    .chip-eyebrow {
+      font-size: 11px; letter-spacing: 0.2em; color: var(--blue);
+      text-transform: uppercase; margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 12px;
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .chip-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--blue); display: inline-block; }
+    
+    .chip-eyebrow.vis { opacity: 1; transform: translateY(0); }
+
+    .chip-wrap {
+      position: relative;
+      transform: scale(0.3); opacity: 0;
+      transition: transform 1.2s cubic-bezier(0.16,1,0.3,1), opacity 0.8s ease;
+    }
+
+    .chip-wrap.vis { transform: scale(1); opacity: 1; }
+
+    .chip-svg { width: 280px; height: 280px; }
+
+    .chip-pin { stroke: var(--blue); stroke-width: 1.5; opacity: 0; transition: opacity 0.3s ease; }
+
+    .chip-wrap.vis .chip-pin { opacity: 1; }
+
+    .chip-wrap.vis .chip-pin:nth-child(1){transition-delay:0.8s;}
+    .chip-wrap.vis .chip-pin:nth-child(2){transition-delay:0.9s;}
+    .chip-wrap.vis .chip-pin:nth-child(3){transition-delay:1.0s;}
+    .chip-wrap.vis .chip-pin:nth-child(4){transition-delay:1.1s;}
+    .chip-wrap.vis .chip-pin:nth-child(5){transition-delay:1.2s;}
+    .chip-wrap.vis .chip-pin:nth-child(6){transition-delay:1.3s;}
+    .chip-wrap.vis .chip-pin:nth-child(7){transition-delay:0.8s;}
+    .chip-wrap.vis .chip-pin:nth-child(8){transition-delay:0.9s;}
+    .chip-wrap.vis .chip-pin:nth-child(9){transition-delay:1.0s;}
+    .chip-wrap.vis .chip-pin:nth-child(10){transition-delay:1.1s;}
+    .chip-wrap.vis .chip-pin:nth-child(11){transition-delay:1.2s;}
+    .chip-wrap.vis .chip-pin:nth-child(12){transition-delay:1.3s;}
+
+    .chip-trace {
+      stroke: var(--blue); stroke-width: 1; fill: none;
+      stroke-dasharray: 200; stroke-dashoffset: 200;
+      transition: stroke-dashoffset 1s ease;
+    }
+
+    .chip-wrap.vis .chip-trace { stroke-dashoffset: 0; }
+
+    .chip-wrap.vis .chip-trace:nth-child(1){transition-delay:1.4s;}
+    .chip-wrap.vis .chip-trace:nth-child(2){transition-delay:1.5s;}
+    .chip-wrap.vis .chip-trace:nth-child(3){transition-delay:1.6s;}
+    .chip-wrap.vis .chip-trace:nth-child(4){transition-delay:1.7s;}
+
+    .chip-label-svg {
+      font-family: monospace; font-size: 8px;
+      fill: var(--blue); letter-spacing: 0.1em;
+      opacity: 0; transition: opacity 0.5s ease;
+    }
+    .chip-wrap.vis .chip-label-svg { opacity: 1; transition-delay: 1.8s; }
+
+    .chip-scan {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      width: 280px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(26,58,107,0.5), transparent);
+      top: calc(50% - 140px); pointer-events: none;
+    }
+
+    .chip-wrap.vis .chip-scan { animation: chipScan 3s ease-in-out 2s infinite; }
+
+    
+    @keyframes chipScan {
+      0%  { top: calc(50% - 140px); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100%{ top: calc(50% + 140px); opacity: 0; }
+    }
+    .chip-caption {
+      margin-top: 2rem; font-size: 13px; color: var(--muted);
+      letter-spacing: 0.05em; text-align: center;
+      opacity: 0; transform: translateY(12px);
+      transition: opacity 0.6s ease 2s, transform 0.6s ease 2s;
+    }
+    .chip-caption.vis { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 768px) {
       nav {
         padding: 1.2rem 1.5rem;
@@ -835,6 +929,64 @@
 
   <div class="section-divider"></div>
 
+  <div class="chip-section" id="chipSection">
+    <div class="chip-eyebrow" id="chipEyebrow">Architecture embarquée</div>
+    <div class="chip-wrap" id="chipWrap">
+      <div class="chip-scan"></div>
+      <svg class="chip-svg" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+        <rect x="70" y="70" width="140" height="140" fill="#E3D9C4" stroke="#1A3A6B" stroke-width="1.5" rx="4"/>
+        <rect x="85" y="85" width="110" height="110" fill="none" stroke="rgba(26,58,107,0.3)" stroke-width="1" rx="2"/>
+        <line x1="85" y1="112" x2="195" y2="112" stroke="rgba(26,58,107,0.15)" stroke-width="0.5"/>
+        <line x1="85" y1="140" x2="195" y2="140" stroke="rgba(26,58,107,0.15)" stroke-width="0.5"/>
+        <line x1="85" y1="168" x2="195" y2="168" stroke="rgba(26,58,107,0.15)" stroke-width="0.5"/>
+        <line x1="112" y1="85" x2="112" y2="195" stroke="rgba(26,58,107,0.15)" stroke-width="0.5"/>
+        <line x1="140" y1="85" x2="140" y2="195" stroke="rgba(26,58,107,0.15)" stroke-width="0.5"/>
+        <line x1="168" y1="85" x2="168" y2="195" stroke="rgba(26,58,107,0.15)" stroke-width="0.5"/>
+        <rect x="92" y="92" width="35" height="25" fill="rgba(26,58,107,0.08)" stroke="rgba(26,58,107,0.3)" stroke-width="0.8" rx="1"/>
+        <rect x="153" y="92" width="35" height="25" fill="rgba(26,58,107,0.08)" stroke="rgba(26,58,107,0.3)" stroke-width="0.8" rx="1"/>
+        <rect x="92" y="163" width="35" height="25" fill="rgba(26,58,107,0.08)" stroke="rgba(26,58,107,0.3)" stroke-width="0.8" rx="1"/>
+        <rect x="153" y="163" width="35" height="25" fill="rgba(26,58,107,0.08)" stroke="rgba(26,58,107,0.3)" stroke-width="0.8" rx="1"/>
+        <rect x="115" y="118" width="50" height="44" fill="rgba(26,58,107,0.12)" stroke="#1A3A6B" stroke-width="1" rx="2"/>
+        <text x="109.5" y="108" text-anchor="middle" class="chip-label-svg">CPU</text>
+        <text x="170.5" y="108" text-anchor="middle" class="chip-label-svg">RAM</text>
+        <text x="109.5" y="179" text-anchor="middle" class="chip-label-svg">I/O</text>
+        <text x="170.5" y="179" text-anchor="middle" class="chip-label-svg">CLK</text>
+        <text x="140" y="143" text-anchor="middle" class="chip-label-svg" style="font-size:9px;">CORE</text>
+        <line class="chip-pin" x1="30" y1="95" x2="70" y2="95"/>
+        <line class="chip-pin" x1="30" y1="112" x2="70" y2="112"/>
+        <line class="chip-pin" x1="30" y1="129" x2="70" y2="129"/>
+        <line class="chip-pin" x1="30" y1="146" x2="70" y2="146"/>
+        <line class="chip-pin" x1="30" y1="163" x2="70" y2="163"/>
+        <line class="chip-pin" x1="30" y1="180" x2="70" y2="180"/>
+        <line class="chip-pin" x1="210" y1="95" x2="250" y2="95"/>
+        <line class="chip-pin" x1="210" y1="112" x2="250" y2="112"/>
+        <line class="chip-pin" x1="210" y1="129" x2="250" y2="129"/>
+        <line class="chip-pin" x1="210" y1="146" x2="250" y2="146"/>
+        <line class="chip-pin" x1="210" y1="163" x2="250" y2="163"/>
+        <line class="chip-pin" x1="210" y1="180" x2="250" y2="180"/>
+        <rect x="25" y="92" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="25" y="109" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="25" y="126" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="25" y="143" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="25" y="160" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="25" y="177" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="250" y="92" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="250" y="109" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="250" y="126" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="250" y="143" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="250" y="160" width="5" height="5" fill="#1A3A6B"/>
+        <rect x="250" y="177" width="5" height="5" fill="#1A3A6B"/>
+        <path class="chip-trace" d="M35 95 L20 95 L20 60 L60 60"/>
+        <path class="chip-trace" d="M255 112 L265 112 L265 60 L220 60"/>
+        <path class="chip-trace" d="M35 180 L20 180 L20 220 L60 220"/>
+        <path class="chip-trace" d="M255 163 L265 163 L265 220 L220 220"/>
+        <circle cx="78" cy="78" r="3" fill="#1A3A6B" opacity="0.4"/>
+      </svg>
+    </div>
+    <p class="chip-caption" id="chipCaption">Microcontrôleur STM32 — Architecture ARM Cortex-M4</p>
+  </div>
+
+  
   <!-- PROJETS -->
   <section id="projets">
     <div class="eyebrow fade-in">Réalisations</div>

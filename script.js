@@ -51,3 +51,17 @@ entries.forEach((entry, i) => {
 }, { threshold: 0.1 })
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
+
+// CHIP SCROLL ANIMATION
+const chipObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.getElementById('chipWrap').classList.add('vis')
+      document.getElementById('chipEyebrow').classList.add('vis')
+      document.getElementById('chipCaption').classList.add('vis')
+    }
+  })
+}, { threshold: 0.3 })
+
+const chipSection = document.getElementById('chipSection')
+if (chipSection) chipObserver.observe(chipSection)
