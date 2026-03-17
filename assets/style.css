@@ -792,6 +792,44 @@ fade-in {
 
 .chip-wrap.vis .chip-scan { animation: chipScan 3s ease-in-out 2s infinite; }
 
+/* BURGER MENU MOBILE */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.burger span {
+  display: block;
+  width: 22px; height: 1.5px;
+  background: var(--navy);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.burger span.open:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger span.open:nth-child(2) { opacity: 0; }
+.burger span.open:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .burger { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed; top: 64px; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: rgba(245,240,230,0.98);
+    border-bottom: 1px solid var(--blue-line);
+    padding: 1rem 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--blue-line);
+  }
+}
+
 
 @keyframes chipScan {
     0%  { top: calc(50% - 140px); opacity: 0; }
@@ -873,3 +911,4 @@ fade-in {
     text-align: center;
     }
 }
+
