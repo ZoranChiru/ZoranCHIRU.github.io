@@ -74,15 +74,44 @@ const ProjectsSection = {
     this.$el.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
   },
   template: `
-    <section id="projets">
-      <div class="eyebrow">Réalisations</div>
-      <h2 class="section-title">Projets sélectionnés</h2>
-      <div class="projects-grid">
-        <ProjectCard
-          v-for="projet in projets"
+     <section id="projets">
+      <div class="eyebrow fade-in">Réalisations</div>
+      <h2 class="section-title fade-in">Projets sélectionnés</h2>
+
+      <div class="projets-asym">
+        <div
+          v-for="(projet, index) in projets"
           :key="projet.num"
-          :projet="projet"
-        />
+          class="projet-row fade-in"
+          :class="{ reverse: index % 2 !== 0 }"
+        >
+          <!-- IMAGE -->
+          <div class="projet-img-wrap">
+            <div class="projet-num">{{ projet.num }}</div>
+            <img
+              :src="projet.image"
+              :alt="projet.titre"
+              class="projet-img"
+              @error="$event.target.src='assets/images/circuit.jpg'"
+            />
+            <span v-if="projet.wip" class="projet-wip">En cours</span>
+          </div>
+
+          <!-- TEXTE -->
+          <div class="projet-content">
+            <div class="projet-cat">{{ projet.categorie }}</div>
+            <h3 class="projet-titre">{{ projet.titre }}</h3>
+            <p class="projet-desc">{{ projet.desc }}</p>
+            <div class="projet-tags">
+              <span
+                v-for="tag in projet.tags"
+                :key="tag.label"
+                class="tag"
+                :class="{ gold: tag.gold }"
+              >{{ tag.label }}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   `
