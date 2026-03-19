@@ -1,9 +1,12 @@
+import store from './store.js'
+import t from './i18n.js'
+
 const HeroSection = {
   data() {
-    return {
-      mouseX: 0,
-      mouseY: 0,
-    }
+    return { mouseX: 0, mouseY: 0, store }
+  },
+  computed: {
+    T() { return t[this.store.langue] }
   },
   mounted() {
     window.addEventListener('mousemove', this.handleMouse)
@@ -22,8 +25,8 @@ const HeroSection = {
       const rect = el.getBoundingClientRect()
       const cx = rect.left + rect.width / 2
       const cy = rect.top + rect.height / 2
-      const dx = (this.mouseX - cx) / window.innerWidth * 18
-      const dy = (this.mouseY - cy) / window.innerHeight * 18
+      const dx = (this.mouseX - cx) / window.innerWidth * 12
+      const dy = (this.mouseY - cy) / window.innerHeight * 12
       return { transform: `translate(${dx}px, ${dy}px)` }
     },
     scrollTo(id) {
@@ -32,7 +35,8 @@ const HeroSection = {
   },
   template: `
     <div class="hero">
-      <div class="hero-grid-lines"></div>
+      <div class="hero-desk-bg"></div>
+      <div class="hero-overlay"></div>
 
       <div class="hero-avatar-wrap" ref="avatarWrap">
         <div class="hero-avatar-ring"></div>
@@ -45,24 +49,18 @@ const HeroSection = {
         </div>
       </div>
 
-      <div class="hero-tag">Ingénieur systèmes embarqués</div>
-
-      <h1 class="hero-name">
-        Zoran<br><em>Chiru</em>
-      </h1>
-
-      <p class="hero-desc">
-        Étudiant ingénieur ENSICAEN — GPSE. Passionné d'électronique embarquée,
-        de systèmes temps réel et de développement logiciel. En alternance jusqu'en 2027.
-      </p>
-
-      <div class="hero-btns">
-        <button class="btn-nav btn-primary" @click="scrollTo('projets')">
-          Voir mes projets
-        </button>
-        <button class="btn-nav btn-outline" @click="scrollTo('contact')">
-          Me contacter
-        </button>
+      <div class="hero-content">
+        <div class="hero-tag">{{ T.hero.tag }}</div>
+        <h1 class="hero-name">Zoran<br><em>Chiru</em></h1>
+        <p class="hero-desc">{{ T.hero.desc }}</p>
+        <div class="hero-btns">
+          <button class="btn-nav btn-primary" @click="scrollTo('projets')">
+            {{ T.hero.btn_projets }}
+          </button>
+          <button class="btn-nav btn-outline" @click="scrollTo('contact')">
+            {{ T.hero.btn_contact }}
+          </button>
+        </div>
       </div>
 
       <div class="scroll-hint">

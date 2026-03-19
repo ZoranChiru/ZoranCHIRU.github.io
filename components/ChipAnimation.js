@@ -1,3 +1,6 @@
+import store from './store.js'
+import t from './i18n.js'
+
 const ChipAnimation = {
   mounted() {
     const gsapScript = document.createElement('script')

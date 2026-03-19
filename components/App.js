@@ -47,9 +47,9 @@ const App = {
     <div>
       <Navbar />
       <HeroSection />
-      <ChipAnimation />
       <div class="section-divider"></div>
       <ProjectsSection />
+      <ChipAnimation />
       <div class="section-divider"></div>
       <ExperienceSection />
       <div class="section-divider"></div>

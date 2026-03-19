@@ -1,38 +1,68 @@
+import store from './store.js'
+import t from './i18n.js'
+
 const ContactForm = {
   data() {
     return {
+      store,
       nom: '',
       email: '',
       message: '',
       envoye: false,
-      erreurs: {}
+      erreurs: {},
+      loading: false,
+      FORM_ID: 'mreyjbnp'
     }
   },
+  computed: {
+    T() { return t[this.store.langue] }
+  },
   mounted() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 100)
-      }
-    })
-  }, { threshold: 0.1 })
-  this.$el.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
-},
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 100)
+        }
+      })
+    }, { threshold: 0.1 })
+    this.$el.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
+  },
   methods: {
     valider() {
       this.erreurs = {}
-      if (!this.nom.trim()) this.erreurs.nom = 'Le nom est requis'
-      if (!this.email.trim()) this.erreurs.email = "L'email est requis"
+      if (!this.nom.trim()) this.erreurs.nom = '!'
+      if (!this.email.trim()) this.erreurs.email = '!'
       else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email))
-        this.erreurs.email = "Format email invalide"
-      if (!this.message.trim()) this.erreurs.message = 'Le message est requis'
+        this.erreurs.email = '!'
+      if (!this.message.trim()) this.erreurs.message = '!'
       return Object.keys(this.erreurs).length === 0
     },
-    envoyer() {
+    async envoyer() {
       if (!this.valider()) return
-      // Ici tu brancheras un vrai service (Formspree, EmailJS...)
-      // Pour l'instant on simule l'envoi
-      this.envoye = true
+      this.loading = true
+      try {
+        const res = await fetch('https://formspree.io/f/' + this.FORM_ID, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            nom: this.nom,
+            email: this.email,
+            message: this.message
+          })
+        })
+        if (res.ok) {
+          this.envoye = true
+        } else {
+          alert('Erreur lors de l\'envoi. Réessaie.')
+        }
+      } catch(e) {
+        alert('Erreur réseau. Réessaie.')
+      } finally {
+        this.loading = false
+      }
     },
     reset() {
       this.nom = ''
@@ -44,23 +74,16 @@ const ContactForm = {
   },
   template: `
     <section id="contact">
-      <div class="eyebrow fade-in">Travaillons ensemble</div>
-
+      <div class="eyebrow fade-in">{{ T.contact.eyebrow }}</div>
       <div class="contact-grid">
 
-        <!-- INFOS GAUCHE -->
         <div class="fade-in">
           <div class="contact-dispo">
             <span class="dispo-dot"></span>
-            Disponible en alternance jusqu'en 2027
+            {{ T.contact.dispo }}
           </div>
-          <div class="contact-intro">Une opportunité à me proposer ?</div>
-          <p class="contact-sub">
-            Basé à Caen, Normandie. Ouvert aux opportunités en France
-            et à l'international, notamment dans les pays nordiques.
-          </p>
-
-          <!-- LIENS -->
+          <div class="contact-intro">{{ T.contact.intro }}</div>
+          <p class="contact-sub">{{ T.contact.sub }}</p>
           <div class="contact-links" style="margin-top:2rem;">
             <a class="contact-link" href="mailto:zoranchiru@gmail.com">
               Email <span>zoranchiru@gmail.com →</span>
@@ -77,36 +100,28 @@ const ContactForm = {
           </div>
         </div>
 
-        <!-- FORMULAIRE DROITE -->
         <div class="fade-in">
-
-          <!-- SUCCESS -->
           <div v-if="envoye" class="form-success">
             <div class="form-success-icon">✓</div>
-            <h3>Message envoyé !</h3>
-            <p>Je te répondrai dans les plus brefs délais.</p>
-            <button class="btn-nav btn-outline" @click="reset()">
-              Envoyer un autre message
-            </button>
+            <h3>{{ T.contact.success }}</h3>
+            <p>{{ T.contact.success_sub }}</p>
+            <button class="btn-nav btn-outline" @click="reset()">↩</button>
           </div>
 
-          <!-- FORM -->
           <form v-else @submit.prevent="envoyer" class="contact-form">
-
             <div class="form-group">
-              <label class="form-label">Nom</label>
+              <label class="form-label">{{ T.contact.nom }}</label>
               <input
                 v-model="nom"
                 type="text"
                 class="form-input"
                 :class="{ error: erreurs.nom }"
-                placeholder="Votre nom"
+                :placeholder="T.contact.nom"
               />
               <span v-if="erreurs.nom" class="form-error">{{ erreurs.nom }}</span>
             </div>
-
             <div class="form-group">
-              <label class="form-label">Email</label>
+              <label class="form-label">{{ T.contact.email }}</label>
               <input
                 v-model="email"
                 type="email"
@@ -116,23 +131,25 @@ const ContactForm = {
               />
               <span v-if="erreurs.email" class="form-error">{{ erreurs.email }}</span>
             </div>
-
             <div class="form-group">
-              <label class="form-label">Message</label>
+              <label class="form-label">{{ T.contact.message }}</label>
               <textarea
                 v-model="message"
                 class="form-input"
                 :class="{ error: erreurs.message }"
-                placeholder="Votre message..."
                 rows="5"
               ></textarea>
               <span v-if="erreurs.message" class="form-error">{{ erreurs.message }}</span>
             </div>
-
-            <button type="submit" class="btn-nav btn-primary" style="width:100%;">
-              Envoyer le message
+            <button
+              type="submit"
+              class="btn-nav btn-primary"
+              style="width:100%;"
+              :disabled="loading"
+            >
+              <span v-if="loading">⏳</span>
+              <span v-else>{{ T.contact.envoyer }}</span>
             </button>
-
           </form>
         </div>
 
