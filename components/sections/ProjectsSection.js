@@ -47,7 +47,7 @@ const ProjectsSection = {
         {
           num: '07', categorie: 'Automatisme',
           lien: '/projets/grafcet',
-          video: 'assets/videos/feu_tricolore/feu_tricolore.mp4',
+          video: 'assets/videos/feu_tricolore/feu_tricolore_auto.mp4',
           image: 'assets/images/feu_tricolore/feu_tricolore.png',
           tags: [{ label: 'Grafcet' }, { label: 'Automate Schneider' }, { label: 'PCB' }]
         },

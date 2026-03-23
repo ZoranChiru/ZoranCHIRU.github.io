@@ -109,7 +109,7 @@ const ProjetGrafcet = {
           </div>
           <div style="margin:1.5rem auto 0; max-width:580px;">
             <div class="media-item">
-              <video src="assets/videos/feu_tricolore/feu_tricolore.mp4" controls muted playsinline style="width:100%;height:280px;object-fit:cover;"></video>
+              <video src="assets/videos/feu_tricolore/feu_tricolore_auto.mp4" controls muted playsinline style="width:100%;height:280px;object-fit:cover;"></video>
               <div class="media-caption">{{ T.video_caption }}</div>
             </div>
           </div>
