@@ -1,23 +1,11 @@
-import Navbar from './Navbar.js'
-import HeroSection from './HeroSection.js'
-import ChipAnimation from './ChipAnimation.js'
-import ProjectsSection from './ProjectsSection.js'
-import ExperienceSection from './ExperienceSection.js'
-import SkillsSection from './SkillsSection.js'
-import ContactForm from './ContactForm.js'
+import Navbar from './layout/Navbar.js'
+import router from './core/router.js'
 
 const App = {
-  components: {
-    Navbar, HeroSection, ChipAnimation,
-    ProjectsSection, ExperienceSection,
-    SkillsSection, ContactForm
-  },
+  components: { Navbar },
   mounted() {
-    // CURSOR
     const cursor = document.createElement('div')
     const ring = document.createElement('div')
-    cursor.id = 'cursor'
-    ring.id = 'cursorRing'
     cursor.className = 'cursor'
     ring.className = 'cursor-ring'
     document.body.appendChild(cursor)
@@ -46,23 +34,11 @@ const App = {
   template: `
     <div>
       <Navbar />
-      <HeroSection />
-      <div class="section-divider"></div>
-      <ProjectsSection />
-      <ChipAnimation />
-      <div class="section-divider"></div>
-      <ExperienceSection />
-      <div class="section-divider"></div>
-      <SkillsSection />
-      <div class="section-divider"></div>
-      <ContactForm />
-      <footer>
-        <p>© 2026 Zoran Chiru — ENSICAEN GPSE</p>
-        <p>Caen, Normandie</p>
-      </footer>
+      <router-view></router-view>
     </div>
   `
 }
 
 const app = Vue.createApp(App)
+app.use(router)
 app.mount('#app')
