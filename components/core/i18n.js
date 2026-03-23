@@ -126,7 +126,7 @@ const translations = {
       success: 'Message envoyé !',
       success_sub: 'Je vous répondrai dans les meilleurs délais.'
     },
-    cv_url: 'assets/CV Zoran CHIRU.pdf',
+    cv_url: 'assets/cv/CV Zoran CHIRU.pdf',
 
     /* ------------------------------------------
        PAGE ROBOT
@@ -433,7 +433,7 @@ const translations = {
       success: 'Message sent!',
       success_sub: 'I\'ll get back to you as soon as possible.'
     },
-    cv_url: 'assets/Resume_internship_Zoran_CHIRU.pdf',
+    cv_url: 'assets/cv/Resume_internship_Zoran_CHIRU.pdf',
 
     robot: {
       badge: 'Robotics · BUT GEII · 2021–2022',
@@ -719,7 +719,7 @@ const translations = {
       success: 'Mesaj trimis!',
       success_sub: 'Îți voi răspunde cât mai curând.'
     },
-    cv_url: 'assets/CV Zoran CHIRU Romania.pdf',
+    cv_url: 'assets/cv/CV Zoran CHIRU Romania.pdf',
 
     robot: {
       badge: 'Robotică · BUT GEII · 2021–2022',
