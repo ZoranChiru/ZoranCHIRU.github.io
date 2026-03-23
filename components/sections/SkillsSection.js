@@ -22,7 +22,9 @@ const SkillsSection = {
               { label: 'C / C++', niveau: 85 },
               { label: 'Python', niveau: 80 },
               { label: 'HTML/CSS/JS', niveau: 65 },
-              { label: 'VHDL', niveau: 40 }
+              { label: 'VHDL', niveau: 60 },
+              { label: 'VBA', niveau: 60 }
+
             ]
           },
           {
@@ -59,7 +61,8 @@ const SkillsSection = {
               { label: 'C / C++', niveau: 85 },
               { label: 'Python', niveau: 80 },
               { label: 'HTML/CSS/JS', niveau: 65 },
-              { label: 'VHDL', niveau: 40 }
+              { label: 'VHDL', niveau: 60 },
+              { label: 'VBA', niveau: 60 }
             ]
           },
           {
@@ -96,7 +99,8 @@ const SkillsSection = {
               { label: 'C / C++', niveau: 85 },
               { label: 'Python', niveau: 80 },
               { label: 'HTML/CSS/JS', niveau: 65 },
-              { label: 'VHDL', niveau: 40 }
+              { label: 'VHDL', niveau: 60 },
+              { label: 'VBA', niveau: 60 }
             ]
           },
           {

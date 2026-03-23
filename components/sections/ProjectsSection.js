@@ -27,37 +27,43 @@ const ProjectsSection = {
           tags: [{ label: 'Python' }, { label: 'UWB' }, { label: 'NFC' }, { label: 'Git' }]
         },
         {
-          num: '04', categorie: 'Automatisme industriel',
+          num: '04', categorie: 'Robotique industrielle',
+          lien: null,
+          video: 'assets/videos/autres/robotique.mp4',
+          tags: [{ label: 'Bras robotique' }, { label: 'TP industriel' }, { label: 'Simulation' }]
+        },
+        {
+          num: '05', categorie: 'Automatisme industriel',
           lien: '/projets/automatismes',
           image: 'assets/images/automatismes/interface_automate.png',
           tags: [{ label: 'Automate' }, { label: 'IHM' }, { label: 'Réseau industriel' }]
         },
         {
-          num: '05', categorie: 'Électronique',
+          num: '06', categorie: 'Électronique',
           lien: '/projets/meteo',
           image: 'assets/images/station meteo/station_meteo.png',
           tags: [{ label: 'Capteurs' }, { label: 'Filtrage' }, { label: 'IHM' }]
         },
         {
-          num: '06', categorie: 'Automatisme',
+          num: '07', categorie: 'Automatisme',
           lien: '/projets/grafcet',
           video: 'assets/videos/feu_tricolore/feu_tricolore.mp4',
           image: 'assets/images/feu_tricolore/feu_tricolore.png',
           tags: [{ label: 'Grafcet' }, { label: 'Automate Schneider' }, { label: 'PCB' }]
         },
         {
-          num: '07', categorie: 'Robotique',
+          num: '08', categorie: 'Robotique',
           lien: '/projets/robot',
           video: 'assets/videos/pilomo/robotsuiveurdeligne.MP4',
           image: 'assets/images/pilomo/robot-pilomo.png',
           tags: [{ label: '🏆 1er Prix', gold: true }, { label: 'Arduino' }, { label: 'C' }, { label: 'Électronique' }]
         },
         {
-          num: '08', categorie: 'Vie associative',
+          num: '09', categorie: 'Vie associative',
           lien: '/projets/bde',
           image: 'assets/images/bde/foot.png',
           tags: [{ label: 'Leadership' }, { label: 'Événements' }, { label: 'BDE' }]
-        }
+        },
       ]
     }
   },

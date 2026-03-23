@@ -44,6 +44,10 @@ const translations = {
           desc: 'Développement d\'une fonction de lecture automatique de la configuration des bancs de test UWB/NFC, évitant les écritures répétées en mémoire ROM.'
         },
         {
+          titre: 'Bras robotique industriel',
+          desc: 'Projet de 6h en fin de deuxième année BUT GEII : mise en place d\'un bras robotique pour futurs TPs. Simulation des mouvements et mise en situation réelle d\'outils industriels.'
+        },
+        {
           titre: 'Automatismes BUT GEII',
           desc: 'Asservissement moteur sur automate, programmation d\'interfaces homme-machine et mise en réseau de machines en architecture maître/esclave.'
         },
@@ -347,6 +351,10 @@ const translations = {
           desc: 'Development of an automatic test bench configuration reader for UWB/NFC validation, reducing repetitive ROM writes.'
         },
         {
+          titre: 'Industrial robotic arm',
+          desc: '6-hour project at the end of BUT GEII second year: setting up a robotic arm for future lab sessions. Movement simulation and real-world industrial tool demonstration.'
+        },
+        {
           titre: 'Industrial automation — BUT GEII',
           desc: 'Motor control on PLC, HMI programming and master/slave network architecture between machines.'
         },
@@ -627,6 +635,10 @@ const translations = {
         {
           titre: 'Validare UWB / NFC — NXP',
           desc: 'Dezvoltarea unei funcții de citire automată a configurației bancurilor de test UWB/NFC, reducând scrierile repetitive în memoria ROM.'
+        },
+        {
+          titre: 'Braț robotic industrial',
+          desc: 'Proiect de 6 ore la sfârșitul celui de-al doilea an BUT GEII: configurarea unui braț robotic pentru viitoarele lucrări practice. Simularea mișcărilor și demonstrarea instrumentelor industriale reale.'
         },
         {
           titre: 'Automatizări BUT GEII',
