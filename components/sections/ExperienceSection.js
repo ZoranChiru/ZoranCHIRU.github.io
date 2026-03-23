@@ -7,7 +7,6 @@ const ExperienceSection = {
     T() { return t[this.store.langue] },
     experiencesSorted() {
       const items = [...this.T.experience.items]
-      // ENSICAEN en premier (2024-2027 en cours)
       const ensicaen = items.findIndex(e => e.company === 'ENSICAEN')
       if (ensicaen > 0) {
         const [item] = items.splice(ensicaen, 1)

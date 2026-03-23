@@ -8,11 +8,10 @@ import ProjetAutomatismes from '../projets/ProjetAutomatismes.js'
 import ProjetDistributeur from '../projets/ProjetDistributeur.js'
 import ProjetNXP from '../projets/ProjetNXP.js'
 import ProjetBDE from '../projets/ProjetBDE.js'
-import ExperienceEDF from '../experience/ExperienceEDF.js'
-import ExperienceBUTGEII from '../experience/ExperienceBUT_GEII.js'
 import ExperienceENSICAEN from '../experience/ExperienceENSICAEN.js'
 import ExperienceNXP from '../experience/ExperienceNXP.js'
-
+import ExperienceEDF from '../experience/ExperienceEDF.js'
+import ExperienceBUTGEII from '../experience/ExperienceBUT_GEII.js'
 
 const routes = [
   { path: '/', component: Home },
@@ -23,10 +22,10 @@ const routes = [
   { path: '/projets/distributeur', component: ProjetDistributeur },
   { path: '/projets/nxp', component: ProjetNXP },
   { path: '/projets/bde', component: ProjetBDE },
-  { path: '/experience/edf', component: ExperienceEDF },
-  { path: '/experience/but-geii', component: ExperienceBUTGEII }, 
   { path: '/experience/ensicaen', component: ExperienceENSICAEN },
   { path: '/experience/nxp', component: ExperienceNXP },
+  { path: '/experience/edf', component: ExperienceEDF },
+  { path: '/experience/but-geii', component: ExperienceBUTGEII },
 ]
 
 const router = createRouter({

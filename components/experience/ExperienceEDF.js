@@ -99,7 +99,7 @@ const ExperienceEDF = {
           <div class="projet-badge">{{ content.badge }}</div>
           <h1 class="projet-h1">{{ content.h1_1 }}<br><em>{{ content.h1_2 }}</em></h1>
           <div class="projet-meta">
-            <span class="meta-item"><strong>Statut</strong> — Stage + Alternance</span>
+            <span class="meta-item"><strong>Statut</strong> — Stage et Alternance</span>
             <span class="meta-item"><strong>Service</strong> — Conduite</span>
             <span class="meta-item"><strong>Lieu</strong> — Flamanville, Manche</span>
           </div>
@@ -135,30 +135,30 @@ const ExperienceEDF = {
         <div class="projet-divider"></div>
 
         <div class="projet-section">
-          <div class="projet-eyebrow">{{ content.stage_eyebrow }}</div>
-          <h2 class="projet-h2">{{ content.stage_titre }}</h2>
-          <p>{{ content.stage_p1 }}</p>
-          <p>{{ content.stage_p2 }}</p>
+          <div class="projet-eyebrow">{{ content.alt_eyebrow }}</div>
+          <h2 class="projet-h2">{{ content.alt_titre }}</h2>
+          <p>{{ content.alt_p1 }}</p>
+          <p>{{ content.alt_p2 }}</p>
           <div class="specs-grid" style="margin-top:1.5rem;">
-            <div class="spec-item"><div class="spec-label">Période</div><div class="spec-value">Avr – Juin 2023</div></div>
-            <div class="spec-item"><div class="spec-label">Type</div><div class="spec-value">Stage fin BUT GEII S4</div></div>
-            <div class="spec-item"><div class="spec-label">Mission</div><div class="spec-value">Vues salle de commande</div></div>
-            <div class="spec-item"><div class="spec-label">Outil</div><div class="spec-value">Logiciel supervision industrielle</div></div>
+            <div class="spec-item"><div class="spec-label">Période</div><div class="spec-value">Juil 2023 – Juil 2024</div></div>
+            <div class="spec-item"><div class="spec-label">Type</div><div class="spec-value">Alternance BUT GEII 3ème année</div></div>
+            <div class="spec-item"><div class="spec-label">Mission</div><div class="spec-value">Automatisation rapports quart</div></div>
+            <div class="spec-item"><div class="spec-label">Outil</div><div class="spec-value">VBA / Excel</div></div>
           </div>
         </div>
 
         <div class="projet-divider"></div>
 
         <div class="projet-section">
-          <div class="projet-eyebrow">{{ content.alt_eyebrow }}</div>
-          <h2 class="projet-h2">{{ content.alt_titre }}</h2>
-          <p>{{ content.alt_p1 }}</p>
-          <p>{{ content.alt_p2 }}</p>
+          <div class="projet-eyebrow">{{ content.stage_eyebrow }}</div>
+          <h2 class="projet-h2">{{ content.stage_titre }}</h2>
+          <p>{{ content.stage_p1 }}</p>
+          <p>{{ content.stage_p2 }}</p>
           <div class="specs-grid" style="margin-top:1.5rem;">
-            <div class="spec-item"><div class="spec-label">Période</div><div class="spec-value">2023 – 2024</div></div>
-            <div class="spec-item"><div class="spec-label">Type</div><div class="spec-value">Alternance BUT GEII 3ème année</div></div>
-            <div class="spec-item"><div class="spec-label">Mission</div><div class="spec-value">Automatisation rapports</div></div>
-            <div class="spec-item"><div class="spec-label">Outil</div><div class="spec-value">VBA / Excel</div></div>
+            <div class="spec-item"><div class="spec-label">Période</div><div class="spec-value">Avril – Juin 2023</div></div>
+            <div class="spec-item"><div class="spec-label">Type</div><div class="spec-value">Stage fin BUT GEII S4</div></div>
+            <div class="spec-item"><div class="spec-label">Mission</div><div class="spec-value">Vues salle de commande</div></div>
+            <div class="spec-item"><div class="spec-label">Outil</div><div class="spec-value">Logiciel supervision industrielle</div></div>
           </div>
         </div>
 

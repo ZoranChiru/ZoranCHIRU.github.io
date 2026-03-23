@@ -90,7 +90,7 @@ const ExperienceNXP = {
       </div>
 
       <div class="projet-hero">
-        <div class="projet-hero-bg" style="background-image:url('assets/images/autres/desk2.png')"></div>
+        <div class="projet-hero-bg" style="background-image:url('assets/images/autres/nxpcaen.png')"></div>
         <div class="projet-hero-overlay"></div>
         <div class="projet-hero-content">
           <div class="projet-badge">{{ content.badge }}</div>

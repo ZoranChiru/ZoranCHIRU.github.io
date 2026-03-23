@@ -84,7 +84,7 @@ const ExperienceENSICAEN = {
       </div>
 
       <div class="projet-hero">
-        <div class="projet-hero-bg" style="background-image:url('assets/images/autres/watch.jpg')"></div>
+        <div class="projet-hero-bg" style="background-image:url('assets/images/autres/ENSICAEN.png')"></div>
         <div class="projet-hero-overlay"></div>
         <div class="projet-hero-content">
           <div class="projet-badge">{{ content.badge }}</div>
