@@ -1024,7 +1024,11 @@ img[src=""], img:not([src]) {
     overflow-y: auto;
     z-index: 999;
   }
-  .nav-links.open { display: flex; }
+  .nav-links.open {display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  height: calc(100vh - 64px) !important;
+  width: 100% !important; }
 
   .nav-dropdown-wrap { width: 100%; }
 
