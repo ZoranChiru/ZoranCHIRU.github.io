@@ -42,7 +42,7 @@ body * { cursor: auto; }
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +50,7 @@ nav {
   background: rgba(44,26,14,0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(122,52,16,0.3);
+  overflow: visible;
 }
 
 .nav-logo {
@@ -64,6 +65,7 @@ nav {
   display: flex;
   gap: 2.5rem;
   align-items: center;
+  overflow: visible;
 }
 
 .nav-links a {
@@ -96,10 +98,11 @@ nav {
 .nav-link:hover { color: var(--cream); }
 
 /* ============================================
-   NAVBAR DROPDOWN — DESKTOP UNIQUEMENT
+   NAVBAR DROPDOWN — DESKTOP
    ============================================ */
 .nav-dropdown-wrap {
   position: relative;
+  overflow: visible;
 }
 
 .nav-link-projects {
@@ -119,7 +122,7 @@ nav {
 
 .nav-dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 14px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(20,20,20,0.98);
@@ -130,7 +133,7 @@ nav {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
-  z-index: 200;
+  z-index: 9999;
 }
 
 .nav-dropdown.visible {
@@ -207,13 +210,9 @@ nav {
 .burger span.open:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ============================================
-   MOBILE SUBMENU — MOBILE UNIQUEMENT
+   MOBILE SUBMENU — caché sur desktop
    ============================================ */
-.mobile-submenu {
-  display: none;
-  width: 100%;
-  background: rgba(0,0,0,0.3);
-}
+.mobile-submenu { display: none; }
 
 .mobile-submenu-item {
   display: block;
@@ -1022,7 +1021,7 @@ img[src=""], img:not([src]) {
    ============================================ */
 @media (max-width: 768px) {
 
-  nav { z-index: 1000; padding: 1.2rem 1.5rem; }
+  nav { padding: 1.2rem 1.5rem; }
   .burger { display: flex; }
   .lang-switcher { display: flex; }
 
@@ -1059,11 +1058,11 @@ img[src=""], img:not([src]) {
     width: 100%;
   }
 
-  /* Cacher le dropdown desktop sur mobile */
-  .nav-dropdown { display: none !important; }
-
-  /* Afficher le submenu mobile */
-  .mobile-submenu { display: block; }
+  .mobile-submenu {
+    display: block;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+  }
 
   .mobile-submenu-item {
     display: block;
