@@ -97,7 +97,7 @@ const Navbar = {
     <nav :class="{ scrolled: scrolled }">
       <div class="nav-logo" @click="navigateTo('/')">Portfolio</div>
 
-      <div class="nav-links" :class="{ open: menuOpen }">
+      <div class="nav-links" :class="{ open: menuOpen }" :style="menuOpen ? 'display:flex !important; background:red !important;' : ''">
 
         <!-- PROJETS DROPDOWN -->
         <div
