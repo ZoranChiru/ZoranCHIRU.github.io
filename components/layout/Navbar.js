@@ -98,7 +98,7 @@ const Navbar = {
       <div class="nav-logo" @click="navigateTo('/')">Portfolio</div>
 
       <div class="nav-links" :class="{ open: menuOpen }" :style="menuOpen ? 'display:flex !important; background:red !important;' : ''">
-      <div style="color:white;font-size:20px;padding:20px;background:green;">TEST VISIBLE</div>
+      <div style="color:white !important;font-size:30px !important;padding:20px;background:green;z-index:99999;position:relative;">TEST VISIBLE 123</div>
       
         <!-- PROJETS DROPDOWN -->
        <div class="nav-dropdown-wrap">
