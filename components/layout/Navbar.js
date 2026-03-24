@@ -100,64 +100,33 @@ const Navbar = {
       <div class="nav-links" :class="{ open: menuOpen }" :style="menuOpen ? 'display:flex !important; background:red !important;' : ''">
 
         <!-- PROJETS DROPDOWN -->
-        <div
-          class="nav-dropdown-wrap"
-          @mouseenter="!isMobileView && (cancelCloseTimer(), projetsOpen = true)"
-          @mouseleave="!isMobileView && startCloseTimer('projets')"
-        >
-          <div
-            class="nav-link-projects"
-            @click="isMobileView ? toggleMobileProjets() : null"
-          >
-            {{ T.nav.projets }}
-            <span class="dropdown-arrow" :class="{ open: isMobileView ? mobileProjetOpen : projetsOpen }">▾</span>
-          </div>
-          <div
-            class="nav-dropdown"
-            :class="{ visible: isMobileView ? mobileProjetOpen : projetsOpen }"
-            @mouseenter="!isMobileView && cancelCloseTimer()"
-            @mouseleave="!isMobileView && startCloseTimer('projets')"
-          >
-            <div
-              v-for="item in T.nav.projets_menu"
-              :key="item.lien"
-              class="dropdown-item"
-              @click="navigateTo(item.lien)"
-            >{{ item.label }}</div>
-          </div>
+       <div class="nav-dropdown-wrap">
+        <div class="nav-link-projects" style="color:white;display:block;padding:1.2rem 2rem;" @click="mobileProjetOpen = !mobileProjetOpen">
+          {{ T.nav.projets }} ▾
         </div>
+        <div v-if="mobileProjetOpen">
+          <div v-for="item in T.nav.projets_menu" :key="item.lien"
+            style="color:white;padding:0.9rem 3rem;display:block;border-bottom:1px solid rgba(122,52,16,0.25);"
+            @click="navigateTo(item.lien)"
+          >{{ item.label }}</div>
+        </div>
+      </div>
 
         <!-- EXPÉRIENCES DROPDOWN -->
-        <div
-          class="nav-dropdown-wrap"
-          @mouseenter="!isMobileView && (cancelCloseTimer(), experiencesOpen = true)"
-          @mouseleave="!isMobileView && startCloseTimer('experiences')"
-        >
-          <div
-            class="nav-link-projects"
-            @click="isMobileView ? toggleMobileExp() : null"
-            style="color:white !important; background:blue; display:block;"
-          >
-            {{ T.nav.experience }}
-            <span class="dropdown-arrow" :class="{ open: isMobileView ? mobileExpOpen : experiencesOpen }">▾</span>
+       <div class="nav-dropdown-wrap">
+          <div class="nav-link-projects" style="color:white;display:block;padding:1.2rem 2rem;" @click="mobileExpOpen = !mobileExpOpen">
+            {{ T.nav.experience }} ▾
           </div>
-          <div
-            class="nav-dropdown"
-            :class="{ visible: isMobileView ? mobileExpOpen : experiencesOpen }"
-            @mouseenter="!isMobileView && cancelCloseTimer()"
-            @mouseleave="!isMobileView && startCloseTimer('experiences')"
-          >
-            <div
-              v-for="item in currentExpMenu"
-              :key="item.lien"
-              class="dropdown-item"
+          <div v-if="mobileExpOpen">
+            <div v-for="item in currentExpMenu" :key="item.lien"
+              style="color:white;padding:0.9rem 3rem;display:block;border-bottom:1px solid rgba(122,52,16,0.25);"
               @click="navigateTo(item.lien)"
             >{{ item.label }}</div>
           </div>
         </div>
 
-        <div class="nav-link" @click="goHome('competences')" style="color:white !important; background:green; display:block;">{{ T.nav.competences }}</div>
-        <div class="nav-link" @click="goHome('contact')">{{ T.nav.contact }}</div>
+        <div style="color:white;display:block;padding:1.2rem 2rem;border-bottom:1px solid rgba(122,52,16,0.25);" @click="goHome('competences')">{{ T.nav.competences }}</div>
+        <div style="color:white;display:block;padding:1.2rem 2rem;" @click="goHome('contact')">{{ T.nav.contact }}</div>
 
       </div>
 
