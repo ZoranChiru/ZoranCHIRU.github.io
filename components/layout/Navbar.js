@@ -136,6 +136,7 @@ const Navbar = {
           <div
             class="nav-link-projects"
             @click="isMobileView ? toggleMobileExp() : null"
+            style="color:white !important; background:blue; display:block;"
           >
             {{ T.nav.experience }}
             <span class="dropdown-arrow" :class="{ open: isMobileView ? mobileExpOpen : experiencesOpen }">▾</span>
@@ -155,7 +156,7 @@ const Navbar = {
           </div>
         </div>
 
-        <div class="nav-link" @click="goHome('competences')">{{ T.nav.competences }}</div>
+        <div class="nav-link" @click="goHome('competences')" style="color:white !important; background:green; display:block;">{{ T.nav.competences }}</div>
         <div class="nav-link" @click="goHome('contact')">{{ T.nav.contact }}</div>
 
       </div>
