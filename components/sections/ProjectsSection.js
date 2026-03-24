@@ -29,7 +29,7 @@ const ProjectsSection = {
         {
           num: '04', categorie: 'Robotique industrielle',
           lien: null,
-          video: 'assets/videos/autres/robotique.mp4',
+          video: 'assets/videos/robotique.mp4',
           tags: [{ label: 'Bras robotique' }, { label: 'TP industriel' }, { label: 'Simulation' }]
         },
         {

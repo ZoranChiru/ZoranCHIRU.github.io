@@ -1015,8 +1015,7 @@ img[src=""], img:not([src]) {
   .nav-links {
     display: none;
     position: fixed;
-    top: 64px; left: 0; right: 0;
-    bottom: 0;
+    top: 64px; left: 0; right: 0; bottom: 0;
     flex-direction: column;
     gap: 0;
     background: rgba(26,12,4,0.98);
@@ -1037,6 +1036,7 @@ img[src=""], img:not([src]) {
     width: 100%;
   }
 
+  /* DROPDOWN MOBILE — caché par défaut */
   .nav-dropdown {
     position: static;
     transform: none;
@@ -1045,9 +1045,20 @@ img[src=""], img:not([src]) {
     padding: 0;
     min-width: unset;
     border-radius: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s, max-height 0.3s;
+  }
+
+  /* DROPDOWN MOBILE — visible quand .open */
+  .nav-dropdown.visible {
     opacity: 1;
+    max-height: 500px;
     pointer-events: all;
   }
+
   .nav-dropdown::before { display: none; }
 
   .dropdown-item {
@@ -1057,8 +1068,6 @@ img[src=""], img:not([src]) {
     font-size: 14px;
     color: rgba(240,239,237,0.7);
   }
-  .dropdown-item:hover { padding-left: 3rem; }
-
 
   .hero { padding: 7rem 1.5rem 4rem; }
   .hero-avatar-wrap { display: none; }
