@@ -34,9 +34,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ============================================
-   CURSOR CUSTOM — POINT MARRON SIMPLE
-   ============================================ */
 body * { cursor: auto; }
 
 /* ============================================
@@ -61,7 +58,6 @@ nav {
   color: #FFFFFF;
   letter-spacing: 0.12em;
   text-decoration: none;
-  cursor: none;
 }
 
 .nav-links {
@@ -100,7 +96,7 @@ nav {
 .nav-link:hover { color: var(--cream); }
 
 /* ============================================
-   NAVBAR DROPDOWN
+   NAVBAR DROPDOWN — DESKTOP UNIQUEMENT
    ============================================ */
 .nav-dropdown-wrap {
   position: relative;
@@ -122,23 +118,29 @@ nav {
 .dropdown-arrow.open { transform: rotate(180deg); }
 
 .nav-dropdown {
-  position: absolute; top: calc(100% + 8px); left: 50%;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
   transform: translateX(-50%);
   background: rgba(20,20,20,0.98);
   border: 1px solid var(--blue-line);
   border-radius: 4px;
   min-width: 280px;
-  padding: 6px 0;
-  padding-top: 8px;
-  opacity: 0; pointer-events: none;
+  padding: 8px 0;
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.2s;
   z-index: 200;
 }
+
 .nav-dropdown.visible {
-  opacity: 1; pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
+
 .nav-dropdown::before {
-  content: ''; position: absolute;
+  content: '';
+  position: absolute;
   top: -5px; left: 50%;
   width: 8px; height: 8px;
   background: rgba(20,20,20,0.98);
@@ -148,10 +150,13 @@ nav {
 }
 
 .dropdown-item {
-  display: block; padding: 10px 20px;
-  font-size: 13px; color: rgba(240,239,237,0.6);
+  display: block;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: rgba(240,239,237,0.6);
   letter-spacing: 0.03em;
-  transition: all 0.15s; border-left: 2px solid transparent;
+  transition: all 0.15s;
+  border-left: 2px solid transparent;
 }
 .dropdown-item:hover {
   color: var(--cream);
@@ -200,6 +205,23 @@ nav {
 .burger span.open:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .burger span.open:nth-child(2) { opacity: 0; }
 .burger span.open:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ============================================
+   MOBILE SUBMENU — MOBILE UNIQUEMENT
+   ============================================ */
+.mobile-submenu {
+  display: none;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.mobile-submenu-item {
+  display: block;
+  padding: 0.9rem 3rem;
+  color: rgba(240,239,237,0.7);
+  font-size: 14px;
+  border-bottom: 1px solid var(--blue-line);
+}
 
 /* ============================================
    HERO
@@ -450,7 +472,7 @@ section { padding: 6rem 4rem; }
 }
 
 /* ============================================
-   PROJETS ASYMÉTRIQUES (page d'accueil)
+   PROJETS ASYMÉTRIQUES
    ============================================ */
 .projets-asym {
   display: flex; flex-direction: column;
@@ -709,11 +731,10 @@ section { padding: 6rem 4rem; }
   display: flex; align-items: center; justify-content: center;
 }
 
-.clickable-img { cursor: none; }
 .clickable-img:hover img { opacity: 0.9; }
 
 /* ============================================
-   PAGES PROJET — SPECS
+   SPECS
    ============================================ */
 .specs-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -736,7 +757,7 @@ section { padding: 6rem 4rem; }
 .spec-value { font-size: 15px; color: var(--navy); }
 
 /* ============================================
-   PAGES PROJET — CODE
+   CODE
    ============================================ */
 .code-block {
   background: #1a1a1a; border-radius: 4px;
@@ -760,7 +781,7 @@ section { padding: 6rem 4rem; }
 }
 
 /* ============================================
-   PAGES PROJET — RÉSULTATS
+   RÉSULTATS
    ============================================ */
 .results-row {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -781,7 +802,7 @@ section { padding: 6rem 4rem; }
 .result-label { font-size: 12px; color: var(--muted); letter-spacing: 0.08em; }
 
 /* ============================================
-   PAGES PROJET — NAVIGATION
+   NAVIGATION PROJET
    ============================================ */
 .projet-nav {
   display: flex; justify-content: space-between;
@@ -821,8 +842,6 @@ section { padding: 6rem 4rem; }
 }
 
 .exp-item:hover::before { transform: scaleY(1); }
-
-.exp-item.clickable { }
 .exp-item.clickable:hover .exp-role { color: var(--blue); }
 
 .exp-voir {
@@ -880,7 +899,6 @@ section { padding: 6rem 4rem; }
 }
 
 .skill-item:last-child { border: none; }
-
 .skill-bar-wrap { width: 48px; height: 2px; background: var(--blue-line); }
 .skill-bar { height: 2px; background: var(--blue); }
 
@@ -901,7 +919,6 @@ section { padding: 6rem 4rem; }
 }
 
 .contact-sub { font-size: 14px; color: var(--muted); line-height: 1.8; }
-
 .contact-links { display: flex; flex-direction: column; gap: 1px; }
 
 .contact-link {
@@ -938,9 +955,6 @@ section { padding: 6rem 4rem; }
   50%       { opacity: 0.6; transform: scale(1.3); }
 }
 
-/* ============================================
-   FORMULAIRE CONTACT
-   ============================================ */
 .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 
@@ -995,7 +1009,7 @@ footer {
 footer p { font-size: 12px; color: var(--muted); }
 
 /* ============================================
-   IMAGES MANQUANTES — FALLBACK
+   FALLBACK IMAGES
    ============================================ */
 img[src=""], img:not([src]) {
   background: var(--cream2);
@@ -1008,7 +1022,7 @@ img[src=""], img:not([src]) {
    ============================================ */
 @media (max-width: 768px) {
 
-  nav { z-index: 1000;  padding: 1.2rem 1.5rem; }
+  nav { z-index: 1000; padding: 1.2rem 1.5rem; }
   .burger { display: flex; }
   .lang-switcher { display: flex; }
 
@@ -1024,11 +1038,14 @@ img[src=""], img:not([src]) {
     overflow-y: auto;
     z-index: 999;
   }
-  .nav-links.open {display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  height: calc(100vh - 64px) !important;
-  width: 100% !important; }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: calc(100vh - 64px);
+    width: 100%;
+  }
 
   .nav-dropdown-wrap { width: 100%; }
 
@@ -1042,39 +1059,18 @@ img[src=""], img:not([src]) {
     width: 100%;
   }
 
-  .nav-dropdown {
-    position: static !important;
-    transform: none !important;
-    left: auto !important;
-    border: none;
-    background: rgba(0,0,0,0.3);
-    padding: 0;
-    min-width: 100%;
-    border-radius: 0;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s, max-height 0.3s;
-    z-index: auto;
-  }
+  /* Cacher le dropdown desktop sur mobile */
+  .nav-dropdown { display: none !important; }
 
-  .nav-dropdown.visible {
-    opacity: 1 !important;
-    max-height: 600px;
-    pointer-events: all;
-  }
+  /* Afficher le submenu mobile */
+  .mobile-submenu { display: block; }
 
-  .nav-dropdown::before { display: none !important; }
-
-  .dropdown-item {
-    padding: 0.9rem 3rem;
-    border-bottom: 1px solid var(--blue-line);
-    border-left: none;
-    font-size: 14px;
-    color: rgba(240,239,237,0.7);
+  .mobile-submenu-item {
     display: block;
-    width: 100%;
+    padding: 0.9rem 3rem;
+    color: rgba(240,239,237,0.7);
+    font-size: 14px;
+    border-bottom: 1px solid var(--blue-line);
   }
 
   .hero { padding: 7rem 1.5rem 4rem; }
@@ -1112,17 +1108,4 @@ img[src=""], img:not([src]) {
     flex-direction: column; gap: 0.5rem;
     text-align: center;
   }
-  .mobile-submenu {
-    width: 100%;
-    background: rgba(0,0,0,0.3);
-  }
-
-  .mobile-submenu-item {
-    display: block;
-    padding: 0.9rem 3rem;
-    color: rgba(240,239,237,0.7);
-    font-size: 14px;
-    border-bottom: 1px solid var(--blue-line);
-  }
-
 }
