@@ -97,10 +97,7 @@ const Navbar = {
     <nav :class="{ scrolled: scrolled }">
       <div class="nav-logo" @click="navigateTo('/')">Portfolio</div>
 
-      <div class="nav-links" :class="{ open: menuOpen }" :style="menuOpen ? 'display:flex !important; flex-direction:column !important; align-items:flex-start !important; background:red !important; height:calc(100vh - 64px) !important; width:100% !important;' : ''">
->
-      <div style="color:white !important;font-size:30px !important;padding:20px;background:green;z-index:99999;position:relative;">TEST VISIBLE 123</div>
-      
+      <div class="nav-links" :class="{ open: menuOpen }">
         <!-- PROJETS DROPDOWN -->
        <div class="nav-dropdown-wrap">
         <div class="nav-link-projects" style="color:white;display:block;padding:1.2rem 2rem;" @click="mobileProjetOpen = !mobileProjetOpen">
