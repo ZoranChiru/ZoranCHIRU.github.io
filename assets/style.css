@@ -1010,7 +1010,7 @@ img[src=""], img:not([src]) {
 
   nav { z-index: 1000;  padding: 1.2rem 1.5rem; }
   .burger { display: flex; }
-  .lang-switcher { display: none; }
+  .lang-switcher { display: flex; }
 
   .nav-links {
     display: none;
