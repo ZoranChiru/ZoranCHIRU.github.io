@@ -11,6 +11,7 @@ const Navbar = {
       mobileProjetOpen: false,
       mobileExpOpen: false,
       closeTimer: null,
+      isMobileView: window.innerWidth <= 768,
       store,
       langs: [
         { code: 'fr', flag: 'https://flagcdn.com/w20/fr.png', label: 'Français' },
@@ -41,13 +42,15 @@ const Navbar = {
   },
   computed: {
     T() { return t[this.store.langue] },
-    currentExpMenu() { return this.experiences_menu[this.store.langue] || this.experiences_menu.fr },
-    isMobile() { return this.menuOpen }
+    currentExpMenu() { return this.experiences_menu[this.store.langue] || this.experiences_menu.fr }
   },
   mounted() {
     store.init()
     window.addEventListener('scroll', () => {
       this.scrolled = window.scrollY > 50
+    })
+    window.addEventListener('resize', () => {
+      this.isMobileView = window.innerWidth <= 768
     })
   },
   methods: {
@@ -99,18 +102,21 @@ const Navbar = {
         <!-- PROJETS DROPDOWN -->
         <div
           class="nav-dropdown-wrap"
-          @mouseenter="!menuOpen && (cancelCloseTimer(), projetsOpen = true)"
-          @mouseleave="!menuOpen && startCloseTimer('projets')"
+          @mouseenter="!isMobileView && (cancelCloseTimer(), projetsOpen = true)"
+          @mouseleave="!isMobileView && startCloseTimer('projets')"
         >
-          <div class="nav-link-projects" @click="menuOpen ? toggleMobileProjets() : null">
+          <div
+            class="nav-link-projects"
+            @click="isMobileView ? toggleMobileProjets() : null"
+          >
             {{ T.nav.projets }}
-            <span class="dropdown-arrow" :class="{ open: projetsOpen || mobileProjetOpen }">▾</span>
+            <span class="dropdown-arrow" :class="{ open: isMobileView ? mobileProjetOpen : projetsOpen }">▾</span>
           </div>
           <div
             class="nav-dropdown"
-            :class="{ visible: menuOpen ? mobileProjetOpen : projetsOpen }"
-            @mouseenter="!menuOpen && cancelCloseTimer()"
-            @mouseleave="!menuOpen && startCloseTimer('projets')"
+            :class="{ visible: isMobileView ? mobileProjetOpen : projetsOpen }"
+            @mouseenter="!isMobileView && cancelCloseTimer()"
+            @mouseleave="!isMobileView && startCloseTimer('projets')"
           >
             <div
               v-for="item in T.nav.projets_menu"
@@ -124,18 +130,21 @@ const Navbar = {
         <!-- EXPÉRIENCES DROPDOWN -->
         <div
           class="nav-dropdown-wrap"
-          @mouseenter="!menuOpen && (cancelCloseTimer(), experiencesOpen = true)"
-          @mouseleave="!menuOpen && startCloseTimer('experiences')"
+          @mouseenter="!isMobileView && (cancelCloseTimer(), experiencesOpen = true)"
+          @mouseleave="!isMobileView && startCloseTimer('experiences')"
         >
-          <div class="nav-link-projects" @click="menuOpen ? toggleMobileExp() : null">
+          <div
+            class="nav-link-projects"
+            @click="isMobileView ? toggleMobileExp() : null"
+          >
             {{ T.nav.experience }}
-            <span class="dropdown-arrow" :class="{ open: experiencesOpen || mobileExpOpen }">▾</span>
+            <span class="dropdown-arrow" :class="{ open: isMobileView ? mobileExpOpen : experiencesOpen }">▾</span>
           </div>
           <div
             class="nav-dropdown"
-            :class="{ visible: menuOpen ? mobileExpOpen : experiencesOpen }"
-            @mouseenter="!menuOpen && cancelCloseTimer()"
-            @mouseleave="!menuOpen && startCloseTimer('experiences')"
+            :class="{ visible: isMobileView ? mobileExpOpen : experiencesOpen }"
+            @mouseenter="!isMobileView && cancelCloseTimer()"
+            @mouseleave="!isMobileView && startCloseTimer('experiences')"
           >
             <div
               v-for="item in currentExpMenu"
