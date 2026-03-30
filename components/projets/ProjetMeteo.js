@@ -34,15 +34,15 @@ const ProjetMeteo = {
       const lang = this.store.langue
       return {
         fr: {
-          p1: 'Les capteurs renvoient des signaux analogiques bruts — température, humidité — qui contiennent du bruit. On applique des filtres pour stabiliser les mesures avant de les afficher.',
+          p1: 'Les capteurs renvoient des signaux analogiques bruts, température, humidité, qui contiennent du bruit. On applique des filtres pour stabiliser les mesures avant de les afficher.',
           p2: 'Pour éviter d\'avoir à aller relever des données en extérieur à chaque TP, le système peut aussi générer des données synthétiques paramétrables. Une petite astuce qui a bien rendu service.'
         },
         en: {
-          p1: 'Sensors return raw analog signals — temperature, humidity — that contain noise. Filters are applied to stabilize measurements before display.',
+          p1: 'Sensors return raw analog signals, temperature, humidity, that contain noise. Filters are applied to stabilize measurements before display.',
           p2: 'To avoid having to collect outdoor data for each lab session, the system can also generate configurable synthetic data. A handy trick that saved a lot of time.'
         },
         ro: {
-          p1: 'Senzorii returnează semnale analogice brute — temperatură, umiditate — care conțin zgomot. Se aplică filtre pentru a stabiliza măsurătorile înainte de afișare.',
+          p1: 'Senzorii returnează semnale analogice brute, temperatură, umiditate, care conțin zgomot. Se aplică filtre pentru a stabiliza măsurătorile înainte de afișare.',
           p2: 'Pentru a evita colectarea datelor în exterior la fiecare lucrare practică, sistemul poate genera și date sintetice configurabile. Un truc util care a economisit mult timp.'
         }
       }[lang] || {}

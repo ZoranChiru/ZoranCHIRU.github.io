@@ -139,10 +139,8 @@ const ProjetRobot = {
         <div class="projet-section">
           <div class="projet-eyebrow">{{ T.resultats_eyebrow }}</div>
           <h2 class="projet-h2">{{ T.resultats_titre }}</h2>
-          <div class="projet-split">
-            <div class="projet-split-text">
-              <p>{{ T.resultats_p }}</p>
-            </div>
+          <div class="projet">
+            <p>{{ T.resultats_p }}</p>
           </div>
           <div style="margin:1.5rem auto 0; max-width:580px;">
             <div class="media-item">
