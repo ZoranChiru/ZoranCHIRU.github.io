@@ -33,19 +33,19 @@ const translations = {
       items: [
         {
           titre: 'Distributeur à croquettes',
-          desc: 'Projet scolaire en équipe mené en parallèle des cours à l\'ENSICAEN — conception d\'un distributeur automatique de croquettes pour chat : PCB, programmation ESP32 et alimentation photovoltaïque.'
+          desc: 'Projet scolaire en équipe mené en parallèle des cours à l\'ENSICAEN, conception d\'un distributeur automatique de croquettes pour chat : PCB, programmation ESP32 et alimentation photovoltaïque.'
         },
         {
           titre: 'Site vitrine — MB Auto',
-          desc: 'Site vitrine pour un garagiste indépendant — design épuré, présentation des services, formulaire de contact. Réalisé sur Wix.'
+          desc: 'Site vitrine pour un garagiste indépendant, design épuré, présentation des services, formulaire de contact. Réalisé sur Wix.'
         },
         {
           titre: 'Validation UWB / NFC — NXP',
-          desc: 'Développement d\'une fonction de lecture automatique de la configuration des bancs de test UWB/NFC — évitant les écritures répétées en mémoire ROM.'
+          desc: 'Développement d\'une fonction de lecture automatique de la configuration des bancs de test UWB/NFC, évitant les écritures répétées en mémoire ROM.'
         },
         {
           titre: 'Bras robotique industriel',
-          desc: 'Projet de 6h en fin de troisième année BUT GEII — mise en place d\'un bras robotique pour futurs TPs, simulation des mouvements et mise en situation réelle d\'outils industriels.'
+          desc: 'Projet de 6h en fin de troisième année BUT GEII, mise en place d\'un bras robotique pour futurs TPs, simulation des mouvements et mise en situation réelle d\'outils industriels.'
         },
         {
           titre: 'Automatismes BUT GEII',
@@ -53,19 +53,19 @@ const translations = {
         },
         {
           titre: 'Station météo embarquée',
-          desc: 'Projet axé sur le traitement du signal — les données sont générées en imitant le bruit de capteurs réels, filtrées puis affichées sur une IHM intégrée.'
+          desc: 'Projet axé sur le traitement du signal, les données sont générées en imitant le bruit de capteurs réels, filtrées puis affichées sur une IHM intégrée.'
         },
         {
           titre: 'Feu tricolore en Grafcet',
-          desc: 'Conception de la carte électronique et programmation d\'un automate Schneider — modélisation Grafcet des séquences d\'états et temporisations.'
+          desc: 'Conception de la carte électronique et programmation d\'un automate Schneider, modélisation Grafcet des séquences d\'états et temporisations.'
         },
         {
           titre: 'Projet Pilomo — Robot suiveur de ligne',
-          desc: 'Robot autonome conçu et programmé durant le BUT GEII — conception de la carte de puissance, capteurs IR, commande PWM. 1ère place au concours IUT de Cherbourg.'
+          desc: 'Robot autonome conçu et programmé durant le BUT GEII, conception de la carte de puissance, capteurs IR, commande PWM. 1ère place au concours IUT de Cherbourg.'
         },
         {
           titre: 'Vie associative — BDE',
-          desc: 'Président du BDE du département GEII 2022-2023 — organisation d\'événements : match de football, BBQ, accueil des premières années.'
+          desc: 'Président du BDE du département GEII 2022-2023, organisation d\'événements : match de football, BBQ, accueil des premières années.'
         },
       ]
     },
@@ -323,15 +323,15 @@ const translations = {
         },
         {
           titre: 'Showcase website — MB Auto',
-          desc: 'Showcase website for an independent mechanic — clean design, service presentation, contact form. Built with Wix.'
+          desc: 'Showcase website for an independent mechanic, clean design, service presentation, contact form. Built with Wix.'
         },
         {
           titre: 'UWB / NFC Validation — NXP',
-          desc: 'Development of an automatic test bench configuration reader for UWB/NFC validation — reducing repetitive ROM writes.'
+          desc: 'Development of an automatic test bench configuration reader for UWB/NFC validation, reducing repetitive ROM writes.'
         },
         {
           titre: 'Industrial robotic arm',
-          desc: '6-hour project at the end of third year BUT GEII — setting up a robotic arm for future lab sessions, movement simulation and real-world industrial tool demonstration.'
+          desc: '6-hour project at the end of third year BUT GEII, setting up a robotic arm for future lab sessions, movement simulation and real-world industrial tool demonstration.'
         },
         {
           titre: 'Industrial automation — BUT GEII',
@@ -351,7 +351,7 @@ const translations = {
         },
         {
           titre: 'Student life — BDE',
-          desc: 'President of the GEII student union 2022-2023 — events: football match, BBQ, welcome day for new students.'
+          desc: 'President of the GEII student union 2022-2023, events: football match, BBQ, welcome day for new students.'
         },
       ]
     },
@@ -370,7 +370,7 @@ const translations = {
           date: '2024 – 2025',
           company: 'NXP Semiconductors',
           role: 'Apprentice — Firmware Development',
-          desc: 'Python test automation for UWB and NFC firmware validation — developed the "describe" function for automatic test bench configuration reading. Git and Jira in an Agile environment.',
+          desc: 'Python test automation for UWB and NFC firmware validation, developed the "describe" function for automatic test bench configuration reading. Git and Jira in an Agile environment.',
           lien: '/experience/nxp'
         },
         {
@@ -605,15 +605,15 @@ const translations = {
       items: [
         {
           titre: 'Distribuitor automat hrană pisică',
-          desc: 'Proiect școlar în echipă la ENSICAEN — proiectarea unui distribuitor automat de hrană pentru pisică: PCB, programare ESP32 și alimentare fotovoltaică.'
+          desc: 'Proiect școlar în echipă la ENSICAEN, proiectarea unui distribuitor automat de hrană pentru pisică: PCB, programare ESP32 și alimentare fotovoltaică.'
         },
         {
           titre: 'Site de prezentare — MB Auto',
-          desc: 'Site de prezentare pentru un mecanic independent — design curat, servicii, formular de contact. Realizat pe Wix.'
+          desc: 'Site de prezentare pentru un mecanic independent, design curat, servicii, formular de contact. Realizat pe Wix.'
         },
         {
           titre: 'Validare UWB / NFC — NXP',
-          desc: 'Dezvoltarea unei funcții de citire automată a configurației bancurilor de test UWB/NFC — reducând scrierile repetitive în memoria ROM.'
+          desc: 'Dezvoltarea unei funcții de citire automată a configurației bancurilor de test UWB/NFC, reducând scrierile repetitive în memoria ROM.'
         },
         {
           titre: 'Braț robotic industrial',
