@@ -35,7 +35,7 @@ const ProjetDistributeur = {
           <div class="projet-badge">{{ T.badge }}</div>
           <h1 class="projet-h1">{{ T.h1_1 }}<br><em>{{ T.h1_2 }}</em></h1>
           <div class="projet-meta">
-            <span class="meta-item"><strong>Formation</strong> — ENSICAEN GPSE 1ère année</span>
+            <span class="meta-item"><strong>Formation</strong> — ENSICAEN GPSE </span>
             <span class="meta-item"><strong>Microcontrôleur</strong> — ESP32</span>
             <span class="meta-item"><strong>Statut</strong> — En cours ✦</span>
           </div>
