@@ -143,12 +143,6 @@ const ProjetRobot = {
             <div class="projet-split-text">
               <p>{{ T.resultats_p }}</p>
             </div>
-            <div class="projet-split-img">
-              <div class="media-item clickable-img" @click="openLightbox('assets/images/pilomo/ZoranWin.png')">
-                <img src="assets/images/pilomo/ZoranWin.png" alt="Jour de la compétition" />
-                <div class="media-caption">{{ T.photo_equipe_caption }}</div>
-              </div>
-            </div>
           </div>
           <div style="margin:1.5rem auto 0; max-width:580px;">
             <div class="media-item">

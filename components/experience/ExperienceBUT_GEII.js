@@ -35,7 +35,7 @@ const ExperienceBUTGEII = {
           edf_btn: 'Voir la page EDF →',
           diplome_eyebrow: 'Diplôme',
           diplome_titre: 'Obtention du BUT GEII — Juin 2024',
-          diplome_p: 'Trois ans de formation intense, couronnés par l\'obtention du BUT GEII mention Bien. Ce diplôme a ouvert la voie vers l\'ENSICAEN pour le cursus ingénieur GPSE.',
+          diplome_p: 'Trois ans de formation intense, couronnés par l\'obtention du BUT GEII. Ce diplôme a ouvert la voie vers l\'ENSICAEN pour le cursus ingénieur GPSE.',
           photo_diplome_caption: 'Remise du diplôme — IUT Cherbourg 2024',
           photo_bde_caption: 'BDE GEII — Tournoi de football 2022/2023',
           nav_retour: '← EDF'
@@ -66,7 +66,7 @@ const ExperienceBUTGEII = {
           edf_btn: 'See the EDF page →',
           diplome_eyebrow: 'Degree',
           diplome_titre: 'BUT GEII graduation — June 2024',
-          diplome_p: 'Three years of intense training, crowned by graduating with honors. This degree opened the path to ENSICAEN for the GPSE engineering program.',
+          diplome_p: 'Three years of intense training, crowned by graduating. This degree opened the path to ENSICAEN for the GPSE engineering program.',
           photo_diplome_caption: 'Graduation — IUT Cherbourg 2024',
           photo_bde_caption: 'BDE GEII — Football tournament 2022/2023',
           nav_retour: '← EDF'
@@ -97,7 +97,7 @@ const ExperienceBUTGEII = {
           edf_btn: 'Vezi pagina EDF →',
           diplome_eyebrow: 'Diplomă',
           diplome_titre: 'Absolvire BUT GEII — Iunie 2024',
-          diplome_p: 'Trei ani de formare intensă, încununați de obținerea BUT GEII cu mențiune Bine. Această diplomă a deschis calea spre ENSICAEN pentru programul de inginerie GPSE.',
+          diplome_p: 'Trei ani de formare intensă, încununați de obținerea BUT GEII. Această diplomă a deschis calea spre ENSICAEN pentru programul de inginerie GPSE.',
           photo_diplome_caption: 'Absolvire — IUT Cherbourg 2024',
           photo_bde_caption: 'BDE GEII — Turneu de fotbal 2022/2023',
           nav_retour: '← EDF'
