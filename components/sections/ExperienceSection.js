@@ -15,15 +15,23 @@ const ExperienceSection = {
       return items
     }
   },
-  mounted() {
-    const observer = new IntersectionObserver(entries => {
+  created() {
+    this._observer = new IntersectionObserver(entries => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
           setTimeout(() => entry.target.classList.add('visible'), i * 120)
         }
       })
     }, { threshold: 0.1 })
-    this.$el.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
+  },
+  mounted() {
+    this.$el.querySelectorAll('.fade-in').forEach(el => this._observer.observe(el))
+  },
+  updated() {
+    this.$el.querySelectorAll('.fade-in:not(.visible)').forEach(el => this._observer.observe(el))
+  },
+  beforeUnmount() {
+    this._observer.disconnect()
   },
   methods: {
     navigateTo(lien) {

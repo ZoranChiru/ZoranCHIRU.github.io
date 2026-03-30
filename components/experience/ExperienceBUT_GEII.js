@@ -14,30 +14,30 @@ const ExperienceBUTGEII = {
           h1_1: 'BUT Génie Électrique',
           h1_2: 'Informatique Industrielle',
           intro_eyebrow: 'Formation',
-          intro_titre: 'Trois ans d\'électronique et d\'automatisme',
-          intro_p1: 'Le BUT GEII à l\'IUT de Cherbourg, c\'est trois ans qui mélangent électronique, programmation embarquée, automatisme et gestion de projets. J\'ai choisi la spécialité Automatisme et Informatique Industrielle — une orientation très concrète, avec beaucoup de travaux pratiques sur des automates industriels réels.',
+          intro_titre: 'Trois ans dans un bassin industriel exceptionnel',
+          intro_p1: 'Le BUT GEII à l\'IUT de Cherbourg, c\'est trois ans de formation en génie électrique, électronique embarquée et automatismes. L\'IUT de Cherbourg est implanté dans un bassin industriel très riche, Naval Group, Orano, EDF, ce qui oriente naturellement la pédagogie vers les automatismes industriels et les systèmes embarqués. La spécialité Automatisme et Informatique Industrielle était la seule proposée sur ce site.',
           intro_p2: 'La troisième année s\'est déroulée en alternance chez EDF CNPE Flamanville, ce qui a donné une vraie dimension industrielle à la formation. Entre les cours et les missions en centrale, c\'était une année dense.',
           p1_eyebrow: 'Projet phare',
           p1_titre: 'Projet Pilomo — Robot suiveur de ligne',
-          p1_p: 'Le projet le plus marquant de la formation : un robot mobile autonome conçu et programmé en équipe, capable de suivre une ligne blanche au sol. Conception de la carte de puissance, câblage des capteurs IR, programmation Arduino. On a remporté la première place au concours IUT de Cherbourg grâce à un raccourci sur la piste que peu d\'équipes avaient eu le temps de développer.',
+          p1_p: 'Le projet le plus marquant de la formation : un robot mobile autonome conçu et programmé en équipe, capable de suivre une ligne blanche au sol, conception de la carte de puissance, câblage des capteurs IR, programmation Arduino. On a remporté la première place au concours IUT de Cherbourg grâce à un raccourci sur la piste que peu d\'équipes avaient eu le temps de développer.',
           p1_btn: 'Voir le projet Pilomo →',
           p2_eyebrow: 'Automatismes industriels',
           p2_titre: 'Feu tricolore, station météo et réseaux',
-          p2_p1: 'En deuxième année, les projets montaient en complexité : feu tricolore programmé en Grafcet sur automate Schneider, station météo embarquée avec filtrage de signaux et IHM intégrée, travaux sur les réseaux industriels maître/esclave.',
+          p2_p1: 'En deuxième année, les projets montaient en complexité : feu tricolore programmé en Grafcet sur automate Schneider, station météo embarquée axée sur le filtrage de signaux synthétiques et IHM intégrée, travaux sur les réseaux industriels maître/esclave.',
           p2_p2: 'Ces projets couvrent tout le spectre de la spécialité : électronique de puissance, automatisme, traitement du signal et programmation embarquée.',
           bde_eyebrow: 'Vie associative',
           bde_titre: 'Président du BDE GEII — 2022/2023',
-          bde_p: 'En deuxième année, j\'ai été élu président du Bureau des Étudiants. Une expérience qui sort du cadre technique : gérer une équipe, organiser des événements, s\'occuper du budget. On a organisé un tournoi de foot, un BBQ de fin d\'année et l\'accueil des premières années.',
+          bde_p: 'En deuxième année, j\'ai été élu président du Bureau des Étudiants, une expérience qui sort du cadre technique : gérer une équipe, organiser des événements, s\'occuper du budget. On a organisé un match de foot, un BBQ de fin d\'année et l\'accueil des premières années.',
           bde_btn: 'Voir la page BDE →',
           edf_eyebrow: '3ème année — Alternance EDF',
           edf_titre: 'Un an à la centrale nucléaire de Flamanville',
-          edf_p: 'La dernière année du BUT GEII s\'est déroulée en alternance à EDF CNPE Flamanville — Électricité de France, centrale nucléaire EPR de nouvelle génération. J\'y ai développé un outil VBA pour automatiser les rapports de changement de quart, dans un environnement industriel très exigeant.',
+          edf_p: 'La dernière année du BUT GEII s\'est déroulée en alternance à EDF CNPE Flamanville, Électricité de France, centrale nucléaire EPR de nouvelle génération. J\'y ai développé un outil VBA pour automatiser les rapports de changement de quart, dans un environnement industriel très exigeant.',
           edf_btn: 'Voir la page EDF →',
           diplome_eyebrow: 'Diplôme',
           diplome_titre: 'Obtention du BUT GEII — Juin 2024',
-          diplome_p: 'Trois ans de formation intense, couronnés par l\'obtention du BUT GEII. Ce diplôme a ouvert la voie vers l\'ENSICAEN pour le cursus ingénieur GPSE.',
+          diplome_p: 'Trois ans de formation intense, couronnés par l\'obtention du BUT GEII avec une moyenne de 14. Ce diplôme a ouvert la voie vers l\'ENSICAEN pour le cursus ingénieur GPSE.',
           photo_diplome_caption: 'Remise du diplôme — IUT Cherbourg 2024',
-          photo_bde_caption: 'BDE GEII — Tournoi de football 2022/2023',
+          photo_bde_caption: 'BDE GEII — Match de football 2022/2023',
           nav_retour: '← EDF'
         },
         en: {
@@ -45,30 +45,30 @@ const ExperienceBUTGEII = {
           h1_1: 'BUT Electrical Engineering',
           h1_2: '& Industrial Computing',
           intro_eyebrow: 'Education',
-          intro_titre: 'Three years of electronics and automation',
-          intro_p1: 'BUT GEII at IUT Cherbourg is three years mixing electronics, embedded programming, automation and project management. I chose the Automation and Industrial Computing specialization — a very hands-on track with lots of practical work on real industrial PLCs.',
+          intro_titre: 'Three years in an exceptional industrial environment',
+          intro_p1: 'BUT GEII at IUT Cherbourg is a three-year program in electrical engineering, embedded programming and automation. The IUT is located in a rich industrial basin, Naval Group, Orano, EDF, which naturally shapes the curriculum toward industrial automation and embedded systems. The Automation and Industrial Computing specialization was the only one available on this campus.',
           intro_p2: 'The third year was done as a work-study student at EDF CNPE Flamanville, which gave the program a real industrial dimension. Between classes and missions at the plant, it was a packed year.',
           p1_eyebrow: 'Key project',
           p1_titre: 'Pilomo Project — Line following robot',
-          p1_p: 'The most memorable project of the program: an autonomous mobile robot designed and programmed as a team, capable of following a white line on the ground. Power board design, IR sensor wiring, Arduino programming. We took first place at the IUT Cherbourg competition thanks to a track shortcut few teams had time to develop.',
+          p1_p: 'The most memorable project of the program: an autonomous mobile robot designed and programmed as a team, capable of following a white line on the ground, power board design, IR sensor wiring, Arduino programming. We took first place at the IUT Cherbourg competition thanks to a track shortcut few teams had time to develop.',
           p1_btn: 'See the Pilomo project →',
           p2_eyebrow: 'Industrial automation',
           p2_titre: 'Traffic light, weather station and networks',
-          p2_p1: 'In the second year, projects grew in complexity: Grafcet traffic light on a Schneider PLC, embedded weather station with signal filtering and integrated HMI, work on master/slave industrial networks.',
+          p2_p1: 'In the second year, projects grew in complexity: Grafcet traffic light on a Schneider PLC, embedded weather station focused on filtering synthetic signals with an integrated HMI, work on master/slave industrial networks.',
           p2_p2: 'These projects cover the full spectrum of the specialization: power electronics, automation, signal processing and embedded programming.',
           bde_eyebrow: 'Student life',
           bde_titre: 'GEII Student Union President — 2022/2023',
-          bde_p: 'In my second year, I was elected student union president. An experience outside the technical scope: managing a team, organizing events, handling the budget. We organized a football tournament, an end-of-year BBQ and a welcome day for first-year students.',
+          bde_p: 'In my second year, I was elected student union president, an experience outside the technical scope: managing a team, organizing events, handling the budget. We organized a football match, an end-of-year BBQ and a welcome day for first-year students.',
           bde_btn: 'See the BDE page →',
           edf_eyebrow: '3rd year — Work-study at EDF',
           edf_titre: 'One year at the Flamanville nuclear plant',
-          edf_p: 'The final year of BUT GEII was done as a work-study student at EDF CNPE Flamanville — Électricité de France, next-generation EPR nuclear plant. I developed a VBA tool to automate shift handover reports in a very demanding industrial environment.',
+          edf_p: 'The final year of BUT GEII was done as a work-study student at EDF CNPE Flamanville, Électricité de France, next-generation EPR nuclear plant. I developed a VBA tool to automate shift handover reports in a very demanding industrial environment.',
           edf_btn: 'See the EDF page →',
           diplome_eyebrow: 'Degree',
           diplome_titre: 'BUT GEII graduation — June 2024',
-          diplome_p: 'Three years of intense training, crowned by graduating. This degree opened the path to ENSICAEN for the GPSE engineering program.',
+          diplome_p: 'Three years of intense training, completed with an average of 14/20. This degree opened the path to ENSICAEN for the GPSE engineering program.',
           photo_diplome_caption: 'Graduation — IUT Cherbourg 2024',
-          photo_bde_caption: 'BDE GEII — Football tournament 2022/2023',
+          photo_bde_caption: 'BDE GEII — Football match 2022/2023',
           nav_retour: '← EDF'
         },
         ro: {
@@ -76,30 +76,30 @@ const ExperienceBUTGEII = {
           h1_1: 'BUT Inginerie Electrică',
           h1_2: 'Informatică Industrială',
           intro_eyebrow: 'Formare',
-          intro_titre: 'Trei ani de electronică și automatizare',
-          intro_p1: 'BUT GEII la IUT Cherbourg reprezintă trei ani care îmbină electronica, programarea încorporată, automatizarea și gestionarea proiectelor. Am ales specializarea Automatizare și Informatică Industrială — o orientare foarte practică, cu mult lucru pe automate industriale reale.',
+          intro_titre: 'Trei ani într-un mediu industrial excepțional',
+          intro_p1: 'BUT GEII la IUT Cherbourg reprezintă trei ani de formare în inginerie electrică, programare încorporată și automatizări. IUT-ul din Cherbourg este situat într-un bazin industrial bogat, Naval Group, Orano, EDF, ceea ce orientează natural pedagogia spre automatizările industriale. Specializarea Automatizare și Informatică Industrială era singura disponibilă pe acest campus.',
           intro_p2: 'Al treilea an s-a desfășurat în alternance la EDF CNPE Flamanville, ceea ce a dat programului o dimensiune industrială reală. Între cursuri și misiunile la centrală, a fost un an dens.',
           p1_eyebrow: 'Proiect principal',
           p1_titre: 'Proiectul Pilomo — Robot urmăritor de linie',
-          p1_p: 'Cel mai memorabil proiect al formării: un robot mobil autonom proiectat și programat în echipă, capabil să urmeze o linie albă pe sol. Proiectarea plăcii de putere, cablarea senzorilor IR, programare Arduino. Am câștigat primul loc la concursul IUT Cherbourg datorită unei scurtături pe pistă pe care puține echipe au avut timp să o dezvolte.',
+          p1_p: 'Cel mai memorabil proiect al formării: un robot mobil autonom proiectat și programat în echipă, capabil să urmeze o linie albă pe sol, proiectarea plăcii de putere, cablarea senzorilor IR, programare Arduino. Am câștigat primul loc la concursul IUT Cherbourg datorită unei scurtături pe pistă pe care puține echipe au avut timp să o dezvolte.',
           p1_btn: 'Vezi proiectul Pilomo →',
           p2_eyebrow: 'Automatizări industriale',
           p2_titre: 'Semafor, stație meteo și rețele',
-          p2_p1: 'În al doilea an, proiectele creșteau în complexitate: semafor Grafcet pe automat Schneider, stație meteo încorporată cu filtrare semnale și IHM integrat, lucrări pe rețele industriale maestru/sclav.',
+          p2_p1: 'În al doilea an, proiectele creșteau în complexitate: semafor Grafcet pe automat Schneider, stație meteo încorporată axată pe filtrarea semnalelor sintetice și IHM integrat, lucrări pe rețele industriale maestru/sclav.',
           p2_p2: 'Aceste proiecte acoperă întregul spectru al specializării: electronică de putere, automatizare, procesarea semnalelor și programare încorporată.',
           bde_eyebrow: 'Viață asociativă',
           bde_titre: 'Președinte BDE GEII — 2022/2023',
-          bde_p: 'În al doilea an, am fost ales președinte al asociației studențești. O experiență în afara cadrului tehnic: gestionarea unei echipe, organizarea evenimentelor, administrarea bugetului. Am organizat un turneu de fotbal, un grătar de sfârșit de an și o zi de primire a primului an.',
+          bde_p: 'În al doilea an, am fost ales președinte al asociației studențești, o experiență în afara cadrului tehnic: gestionarea unei echipe, organizarea evenimentelor, administrarea bugetului. Am organizat un meci de fotbal, un grătar de sfârșit de an și o zi de primire a primului an.',
           bde_btn: 'Vezi pagina BDE →',
           edf_eyebrow: 'Anul 3 — Alternance EDF',
           edf_titre: 'Un an la centrala nucleară Flamanville',
-          edf_p: 'Ultimul an de BUT GEII s-a desfășurat în alternance la EDF CNPE Flamanville — Électricité de France, centrală nucleară EPR de nouă generație. Am dezvoltat un instrument VBA pentru automatizarea rapoartelor de schimb de tură, într-un mediu industrial foarte exigent.',
+          edf_p: 'Ultimul an de BUT GEII s-a desfășurat în alternance la EDF CNPE Flamanville, Électricité de France, centrală nucleară EPR de nouă generație. Am dezvoltat un instrument VBA pentru automatizarea rapoartelor de schimb de tură, într-un mediu industrial foarte exigent.',
           edf_btn: 'Vezi pagina EDF →',
           diplome_eyebrow: 'Diplomă',
           diplome_titre: 'Absolvire BUT GEII — Iunie 2024',
-          diplome_p: 'Trei ani de formare intensă, încununați de obținerea BUT GEII. Această diplomă a deschis calea spre ENSICAEN pentru programul de inginerie GPSE.',
+          diplome_p: 'Trei ani de formare intensă, finalizați cu o medie de 14/20. Această diplomă a deschis calea spre ENSICAEN pentru programul de inginerie GPSE.',
           photo_diplome_caption: 'Absolvire — IUT Cherbourg 2024',
-          photo_bde_caption: 'BDE GEII — Turneu de fotbal 2022/2023',
+          photo_bde_caption: 'BDE GEII — Meci de fotbal 2022/2023',
           nav_retour: '← EDF'
         }
       }[this.store.langue] || {}
@@ -139,7 +139,7 @@ const ExperienceBUTGEII = {
           <div class="projet-meta">
             <span class="meta-item"><strong>Spécialité</strong> — Automatisme & Informatique Industrielle</span>
             <span class="meta-item"><strong>Lieu</strong> — Cherbourg-en-Cotentin</span>
-            <span class="meta-item"><strong>Résultat</strong> — Mention Bien</span>
+            <span class="meta-item"><strong>Résultat</strong> — 14/20</span>
           </div>
           <div class="projet-tags">
             <span class="tag">Automatisme</span>
@@ -154,7 +154,6 @@ const ExperienceBUTGEII = {
 
       <div class="projet-body">
 
-        <!-- INTRO -->
         <div class="projet-section">
           <div class="projet-eyebrow">{{ content.intro_eyebrow }}</div>
           <h2 class="projet-h2">{{ content.intro_titre }}</h2>
@@ -164,7 +163,6 @@ const ExperienceBUTGEII = {
 
         <div class="projet-divider"></div>
 
-        <!-- PILOMO -->
         <div class="projet-section">
           <div class="projet-eyebrow">{{ content.p1_eyebrow }}</div>
           <h2 class="projet-h2">{{ content.p1_titre }}</h2>
@@ -188,7 +186,6 @@ const ExperienceBUTGEII = {
 
         <div class="projet-divider"></div>
 
-        <!-- AUTRES PROJETS -->
         <div class="projet-section">
           <div class="projet-eyebrow">{{ content.p2_eyebrow }}</div>
           <h2 class="projet-h2">{{ content.p2_titre }}</h2>
@@ -201,7 +198,7 @@ const ExperienceBUTGEII = {
             </div>
             <div class="spec-item" style="cursor:pointer;" @click="goMeteo()">
               <div class="spec-label">Station météo</div>
-              <div class="spec-value">Capteurs · IHM →</div>
+              <div class="spec-value">Signal · IHM →</div>
             </div>
             <div class="spec-item" style="cursor:pointer;" @click="goAuto()">
               <div class="spec-label">Automatismes</div>
@@ -212,7 +209,6 @@ const ExperienceBUTGEII = {
 
         <div class="projet-divider"></div>
 
-        <!-- BDE -->
         <div class="projet-section">
           <div class="projet-eyebrow">{{ content.bde_eyebrow }}</div>
           <h2 class="projet-h2">{{ content.bde_titre }}</h2>
@@ -236,7 +232,6 @@ const ExperienceBUTGEII = {
 
         <div class="projet-divider"></div>
 
-        <!-- EDF -->
         <div class="projet-section">
           <div class="projet-eyebrow">{{ content.edf_eyebrow }}</div>
           <h2 class="projet-h2">{{ content.edf_titre }}</h2>
@@ -260,7 +255,6 @@ const ExperienceBUTGEII = {
 
         <div class="projet-divider"></div>
 
-        <!-- DIPLÔME -->
         <div class="projet-section">
           <div class="projet-eyebrow">{{ content.diplome_eyebrow }}</div>
           <h2 class="projet-h2">{{ content.diplome_titre }}</h2>
