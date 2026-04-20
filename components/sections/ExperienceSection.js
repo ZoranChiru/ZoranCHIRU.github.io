@@ -25,10 +25,10 @@ const ExperienceSection = {
     }, { threshold: 0.1 })
   },
   mounted() {
-    this.$el.querySelectorAll('.fade-in').forEach(el => this._observer.observe(el))
+    this.$el.querySelectorAll('.reveal').forEach(el => this._observer.observe(el))
   },
   updated() {
-    this.$el.querySelectorAll('.fade-in:not(.visible)').forEach(el => this._observer.observe(el))
+    this.$el.querySelectorAll('.reveal:not(.visible)').forEach(el => this._observer.observe(el))
   },
   beforeUnmount() {
     this._observer.disconnect()
@@ -40,22 +40,27 @@ const ExperienceSection = {
   },
   template: `
     <section id="experience">
-      <div class="eyebrow fade-in">{{ T.experience.eyebrow }}</div>
-      <h2 class="section-title fade-in">{{ T.experience.titre }}</h2>
-      <div class="exp-list">
+      <div class="section-eyebrow reveal">{{ T.experience.eyebrow }}</div>
+      <h2 class="section-title reveal">{{ T.experience.titre }}</h2>
+
+      <div class="timeline">
         <div
-          v-for="exp in experiencesSorted"
+          v-for="(exp, index) in experiencesSorted"
           :key="exp.role + exp.date"
-          class="exp-item fade-in"
+          class="timeline-item reveal"
           :class="{ clickable: exp.lien }"
           @click="navigateTo(exp.lien)"
         >
-          <div class="exp-date">{{ exp.date }}</div>
-          <div class="exp-content">
-            <div class="exp-role">{{ exp.role }}</div>
-            <div class="exp-company">{{ exp.company }}</div>
-            <div class="exp-desc">{{ exp.desc }}</div>
-            <span v-if="exp.lien" class="exp-voir">Voir le détail →</span>
+          <div class="timeline-date">{{ exp.date }}</div>
+          <div
+            class="timeline-dot"
+            :class="{ current: index === 0 }"
+          ></div>
+          <div>
+            <div class="timeline-role">{{ exp.role }}</div>
+            <div class="timeline-company">{{ exp.company }}</div>
+            <div class="timeline-desc">{{ exp.desc }}</div>
+            <span v-if="exp.lien" class="timeline-voir">Voir le détail →</span>
           </div>
         </div>
       </div>

@@ -14,9 +14,9 @@ const Navbar = {
       isMobile: window.innerWidth <= 768,
       store,
       langs: [
-        { code: 'fr', flag: 'https://flagcdn.com/w20/fr.png', label: 'Français' },
-        { code: 'en', flag: 'https://flagcdn.com/w20/gb.png', label: 'English' },
-        { code: 'ro', flag: 'https://flagcdn.com/w20/ro.png', label: 'Română' }
+        { code: 'fr', label: 'FR' },
+        { code: 'en', label: 'EN' },
+        { code: 'ro', label: 'RO' }
       ],
       experiences_menu: {
         fr: [
@@ -47,7 +47,7 @@ const Navbar = {
   mounted() {
     store.init()
     window.addEventListener('scroll', () => {
-      this.scrolled = window.scrollY > 50
+      this.scrolled = window.scrollY > 10
     })
     window.addEventListener('resize', () => {
       this.isMobile = window.innerWidth <= 768
@@ -96,22 +96,23 @@ const Navbar = {
   },
   template: `
     <nav :class="{ scrolled: scrolled }">
-      <div class="nav-logo" @click="navigateTo('/')">Portfolio</div>
 
+      <!-- Logo -->
+      <div class="nav-logo" @click="navigateTo('/')">ZC</div>
+
+      <!-- Center links -->
       <div class="nav-links" :class="{ open: menuOpen }">
 
-        <!-- ======= PROJETS ======= -->
+        <!-- Projects dropdown -->
         <div
           class="nav-dropdown-wrap"
-          @mouseenter="!isMobile && (cancelCloseTimer(), projetsOpen = true)"
+          @mouseenter="!isMobile && (cancelCloseTimer(), experiencesOpen = false, projetsOpen = true)"
           @mouseleave="!isMobile && startCloseTimer('projets')"
         >
           <div class="nav-link-projects" @click="isMobile && toggleMobileProjets()">
             {{ T.nav.projets }}
             <span class="dropdown-arrow" :class="{ open: isMobile ? mobileProjetOpen : projetsOpen }">▾</span>
           </div>
-
-          <!-- DESKTOP : dropdown absolu -->
           <div
             v-if="!isMobile"
             class="nav-dropdown"
@@ -126,8 +127,6 @@ const Navbar = {
               @click="navigateTo(item.lien)"
             >{{ item.label }}</div>
           </div>
-
-          <!-- MOBILE : submenu inline -->
           <div v-if="isMobile && mobileProjetOpen" class="mobile-submenu">
             <div
               v-for="item in T.nav.projets_menu"
@@ -138,18 +137,16 @@ const Navbar = {
           </div>
         </div>
 
-        <!-- ======= EXPÉRIENCES ======= -->
+        <!-- Experiences dropdown -->
         <div
           class="nav-dropdown-wrap"
-          @mouseenter="!isMobile && (cancelCloseTimer(), experiencesOpen = true)"
+          @mouseenter="!isMobile && (cancelCloseTimer(), projetsOpen = false, experiencesOpen = true)"
           @mouseleave="!isMobile && startCloseTimer('experiences')"
         >
           <div class="nav-link-projects" @click="isMobile && toggleMobileExp()">
             {{ T.nav.experience }}
             <span class="dropdown-arrow" :class="{ open: isMobile ? mobileExpOpen : experiencesOpen }">▾</span>
           </div>
-
-          <!-- DESKTOP : dropdown absolu -->
           <div
             v-if="!isMobile"
             class="nav-dropdown"
@@ -164,8 +161,6 @@ const Navbar = {
               @click="navigateTo(item.lien)"
             >{{ item.label }}</div>
           </div>
-
-          <!-- MOBILE : submenu inline -->
           <div v-if="isMobile && mobileExpOpen" class="mobile-submenu">
             <div
               v-for="item in currentExpMenu"
@@ -181,28 +176,25 @@ const Navbar = {
 
       </div>
 
+      <!-- Language switcher — plain text -->
       <div class="lang-switcher">
-        <button
-          v-for="lang in langs"
-          :key="lang.code"
-          class="lang-btn"
-          :class="{ active: store.langue === lang.code }"
-          @click="store.setLangue(lang.code)"
-          :title="lang.label"
-        >
-          <img
-            :src="lang.flag"
-            :alt="lang.label"
-            style="width:20px;height:14px;object-fit:cover;border-radius:2px;"
-          />
-        </button>
+        <template v-for="(lang, i) in langs" :key="lang.code">
+          <span v-if="i > 0" class="lang-divider"></span>
+          <button
+            class="lang-btn"
+            :class="{ active: store.langue === lang.code }"
+            @click="store.setLangue(lang.code)"
+          >{{ lang.label }}</button>
+        </template>
       </div>
 
-      <button class="burger" @click="menuOpen = !menuOpen">
+      <!-- Burger -->
+      <button class="burger" @click="menuOpen = !menuOpen" aria-label="Menu">
         <span :class="{ open: menuOpen }"></span>
         <span :class="{ open: menuOpen }"></span>
         <span :class="{ open: menuOpen }"></span>
       </button>
+
     </nav>
   `
 }

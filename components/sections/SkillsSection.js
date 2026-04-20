@@ -9,116 +9,55 @@ const SkillsSection = {
         fr: [
           {
             cat: 'Embarqué',
-            skills: [
-              { label: 'STM32 / ARM', niveau: 85 },
-              { label: 'FreeRTOS', niveau: 75 },
-              { label: 'Arduino', niveau: 90 },
-              { label: 'ESP32', niveau: 70 }
-            ]
+            skills: ['STM32 / ARM', 'FreeRTOS', 'Arduino', 'ESP32']
           },
           {
             cat: 'Langages',
-            skills: [
-              { label: 'C / C++', niveau: 85 },
-              { label: 'Python', niveau: 80 },
-              { label: 'HTML/CSS/JS', niveau: 65 },
-              { label: 'VHDL', niveau: 60 },
-              { label: 'VBA', niveau: 60 }
-
-            ]
+            skills: ['C / C++', 'Python', 'HTML / CSS / JS', 'VHDL', 'VBA']
           },
           {
             cat: 'Outils & Protocoles',
-            skills: [
-              { label: 'Proteus / KiCad', niveau: 75 },
-              { label: 'ADS (simulation HF)', niveau: 70 },
-              { label: 'UWB / NFC', niveau: 65 },
-              { label: 'Git / Jira', niveau: 75 }
-            ]
+            skills: ['Proteus / KiCad', 'ADS (simulation HF)', 'UWB / NFC', 'Git / Jira']
           },
           {
             cat: 'Langues',
-            skills: [
-              { label: 'Français', niveau: 100 },
-              { label: 'Roumain', niveau: 100 },
-              { label: 'Anglais (TOEIC 910)', niveau: 88 }
-            ]
+            skills: ['Français (natif)', 'Roumain (natif)', 'Anglais — TOEIC 910']
           }
         ],
         en: [
           {
             cat: 'Embedded',
-            skills: [
-              { label: 'STM32 / ARM', niveau: 85 },
-              { label: 'FreeRTOS', niveau: 75 },
-              { label: 'Arduino', niveau: 90 },
-              { label: 'ESP32', niveau: 70 }
-            ]
+            skills: ['STM32 / ARM', 'FreeRTOS', 'Arduino', 'ESP32']
           },
           {
             cat: 'Languages',
-            skills: [
-              { label: 'C / C++', niveau: 85 },
-              { label: 'Python', niveau: 80 },
-              { label: 'HTML/CSS/JS', niveau: 65 },
-              { label: 'VHDL', niveau: 60 },
-              { label: 'VBA', niveau: 60 }
-            ]
+            skills: ['C / C++', 'Python', 'HTML / CSS / JS', 'VHDL', 'VBA']
           },
           {
             cat: 'Tools & Protocols',
-            skills: [
-              { label: 'Proteus / KiCad', niveau: 75 },
-              { label: 'ADS (HF simulation)', niveau: 70 },
-              { label: 'UWB / NFC', niveau: 65 },
-              { label: 'Git / Jira', niveau: 75 }
-            ]
+            skills: ['Proteus / KiCad', 'ADS (HF simulation)', 'UWB / NFC', 'Git / Jira']
           },
           {
-            cat: 'Languages spoken',
-            skills: [
-              { label: 'French', niveau: 100 },
-              { label: 'Romanian', niveau: 100 },
-              { label: 'English (TOEIC 910)', niveau: 88 }
-            ]
+            cat: 'Spoken languages',
+            skills: ['French (native)', 'Romanian (native)', 'English — TOEIC 910']
           }
         ],
         ro: [
           {
             cat: 'Incorporate',
-            skills: [
-              { label: 'STM32 / ARM', niveau: 85 },
-              { label: 'FreeRTOS', niveau: 75 },
-              { label: 'Arduino', niveau: 90 },
-              { label: 'ESP32', niveau: 70 }
-            ]
+            skills: ['STM32 / ARM', 'FreeRTOS', 'Arduino', 'ESP32']
           },
           {
             cat: 'Limbaje',
-            skills: [
-              { label: 'C / C++', niveau: 85 },
-              { label: 'Python', niveau: 80 },
-              { label: 'HTML/CSS/JS', niveau: 65 },
-              { label: 'VHDL', niveau: 60 },
-              { label: 'VBA', niveau: 60 }
-            ]
+            skills: ['C / C++', 'Python', 'HTML / CSS / JS', 'VHDL', 'VBA']
           },
           {
             cat: 'Instrumente & Protocoale',
-            skills: [
-              { label: 'Proteus / KiCad', niveau: 75 },
-              { label: 'ADS (simulare HF)', niveau: 70 },
-              { label: 'UWB / NFC', niveau: 65 },
-              { label: 'Git / Jira', niveau: 75 }
-            ]
+            skills: ['Proteus / KiCad', 'ADS (simulare HF)', 'UWB / NFC', 'Git / Jira']
           },
           {
             cat: 'Limbi vorbite',
-            skills: [
-              { label: 'Franceză', niveau: 100 },
-              { label: 'Română', niveau: 100 },
-              { label: 'Engleză (TOEIC 910)', niveau: 88 }
-            ]
+            skills: ['Franceză (nativă)', 'Română (nativă)', 'Engleză — TOEIC 910']
           }
         ]
       }
@@ -134,21 +73,21 @@ const SkillsSection = {
         if (entry.isIntersecting) entry.target.classList.add('visible')
       })
     }, { threshold: 0.1 })
-    this.$el.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
+    this.$el.querySelectorAll('.reveal').forEach(el => observer.observe(el))
   },
   template: `
     <section id="competences">
-      <div class="eyebrow fade-in">{{ T.competences.eyebrow }}</div>
-      <h2 class="section-title fade-in">{{ T.competences.titre }}</h2>
-      <div class="skills-wrap fade-in">
-        <div v-for="groupe in currentGroupes" :key="groupe.cat" class="skill-group">
-          <div class="skill-cat">{{ groupe.cat }}</div>
-          <div v-for="skill in groupe.skills" :key="skill.label" class="skill-item">
-            {{ skill.label }}
-            <div class="skill-bar-wrap">
-              <div class="skill-bar" :style="{ width: skill.niveau + '%' }"></div>
-            </div>
-          </div>
+      <div class="section-eyebrow reveal">{{ T.competences.eyebrow }}</div>
+      <h2 class="section-title reveal">{{ T.competences.titre }}</h2>
+
+      <div class="specs-table reveal">
+        <div
+          v-for="groupe in currentGroupes"
+          :key="groupe.cat"
+          class="specs-row"
+        >
+          <div class="specs-cat">{{ groupe.cat }}</div>
+          <div class="specs-value">{{ groupe.skills.join(', ') }}</div>
         </div>
       </div>
     </section>

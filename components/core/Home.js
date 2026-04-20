@@ -12,18 +12,10 @@ const Home = {
   template: `
     <div>
       <HeroSection />
-      <div class="section-divider"></div>
       <ProjectsSection />
-      <div class="section-divider"></div>
       <ExperienceSection />
-      <div class="section-divider"></div>
       <SkillsSection />
-      <div class="section-divider"></div>
       <ContactForm />
-      <footer>
-        <p>© 2026 Zoran Chiru — ENSICAEN GPSE</p>
-        <p>Caen, Normandie</p>
-      </footer>
     </div>
   `
 }

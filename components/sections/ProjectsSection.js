@@ -7,63 +7,82 @@ const ProjectsSection = {
       store,
       projets: [
         {
-          num: '01', categorie: 'IoT / Embarqué',
+          num: '01',
+          categorie: 'IoT / Embarqué',
           lien: '/projets/distributeur',
-          image: 'assets/images/croquettes/3D_distributeur.png',
           wip: true,
+          color: '#6366f1',
+          wide: true,
+          image: 'assets/images/croquettes/3D_distributeur.png',
           tags: [{ label: 'ESP32' }, { label: 'C/C++' }, { label: 'Autonome' }]
         },
         {
-          num: '02', categorie: 'Web',
+          num: '02',
+          categorie: 'Web',
           lien: null,
-          image: 'assets/images/autres/site_mecano.png',
           wip: true,
+          color: '#10b981',
+          image: 'assets/images/autres/site_mecano.png',
           tags: [{ label: 'Wix' }, { label: 'Design' }, { label: 'Vitrine' }]
         },
         {
-          num: '03', categorie: 'Firmware · NXP',
+          num: '03',
+          categorie: 'Firmware · NXP',
           lien: '/projets/nxp',
-          image: 'assets/images/autres/desk2.png',
+          color: '#f59e0b',
+          image: 'assets/images/autres/nxpcaen.png',
           tags: [{ label: 'Python' }, { label: 'UWB' }, { label: 'NFC' }, { label: 'Git' }]
         },
         {
-          num: '04', categorie: 'Robotique industrielle',
+          num: '04',
+          categorie: 'Robotique industrielle',
           lien: null,
-          video: 'assets/videos/robotique.mp4',
+          color: '#f43f5e',
+          image: 'assets/images/automatismes/reseau_automatismes.png',
           tags: [{ label: 'Bras robotique' }, { label: 'TP industriel' }, { label: 'Simulation' }]
         },
         {
-          num: '05', categorie: 'Automatisme industriel',
+          num: '05',
+          categorie: 'Automatisme industriel',
           lien: '/projets/automatismes',
+          color: '#3b82f6',
+          wide: true,
           image: 'assets/images/automatismes/interface_automate.png',
           tags: [{ label: 'Automate' }, { label: 'IHM' }, { label: 'Réseau industriel' }]
         },
         {
-          num: '06', categorie: 'Électronique',
+          num: '06',
+          categorie: 'Électronique',
           lien: '/projets/meteo',
+          color: '#06b6d4',
           image: 'assets/images/station meteo/station_meteo.png',
           tags: [{ label: 'Capteurs' }, { label: 'Filtrage' }, { label: 'IHM' }]
         },
         {
-          num: '07', categorie: 'Automatisme',
+          num: '07',
+          categorie: 'Automatisme',
           lien: '/projets/grafcet',
-          video: 'assets/videos/feu_tricolore/feu_tricolore_auto.mp4',
+          color: '#f97316',
           image: 'assets/images/feu_tricolore/feu_tricolore.png',
-          tags: [{ label: 'Grafcet' }, { label: 'Automate Schneider' }, { label: 'PCB' }]
+          tags: [{ label: 'Grafcet' }, { label: 'Schneider' }, { label: 'PCB' }]
         },
         {
-          num: '08', categorie: 'Robotique',
+          num: '08',
+          categorie: 'Robotique',
           lien: '/projets/robot',
-          video: 'assets/videos/pilomo/robotsuiveurdeligne.MP4',
+          color: '#eab308',
+          wide: true,
           image: 'assets/images/pilomo/robot-pilomo.png',
-          tags: [{ label: '🏆 1er Prix', gold: true }, { label: 'Arduino' }, { label: 'C' }, { label: 'Électronique' }]
+          tags: [{ label: '1er Prix', gold: true }, { label: 'Arduino' }, { label: 'C' }, { label: 'Électronique' }]
         },
         {
-          num: '09', categorie: 'Vie associative',
+          num: '09',
+          categorie: 'Vie associative',
           lien: '/projets/bde',
-          image: 'assets/images/bde/foot.png',
+          color: '#22c55e',
+          image: 'assets/images/bde/acceuil.png',
           tags: [{ label: 'Leadership' }, { label: 'Événements' }, { label: 'BDE' }]
-        },
+        }
       ]
     }
   },
@@ -74,59 +93,58 @@ const ProjectsSection = {
     const observer = new IntersectionObserver(entries => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 100)
+          setTimeout(() => entry.target.classList.add('visible'), i * 60)
         }
       })
-    }, { threshold: 0.1 })
-    this.$el.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
+    }, { threshold: 0.05 })
+    this.$el.querySelectorAll('.reveal').forEach(el => observer.observe(el))
+  },
+  methods: {
+    navigate(lien) {
+      if (lien) this.$router.push(lien)
+    }
   },
   template: `
-    <section id="projets">
-      <div class="eyebrow fade-in">{{ T.projets.eyebrow }}</div>
-      <h2 class="section-title fade-in">{{ T.projets.titre }}</h2>
-      <div class="projets-asym">
+    <section id="projets" class="bg-alt">
+      <div class="section-eyebrow reveal">{{ T.projets.eyebrow }}</div>
+      <h2 class="section-title reveal">{{ T.projets.titre }}</h2>
+
+      <div class="projects-bento">
         <div
           v-for="(projet, index) in projets"
           :key="projet.num"
-          class="projet-row fade-in"
-          :class="{ reverse: index % 2 !== 0 }"
+          class="project-card reveal"
+          :class="{ 'no-link': !projet.lien, 'project-card-wide': projet.wide }"
+          @click="navigate(projet.lien)"
         >
-          <div class="projet-img-wrap">
-            <div class="projet-num">{{ projet.num }}</div>
-            <video
-              v-if="projet.video"
-              class="projet-img"
-              :src="projet.video"
-              autoplay muted loop playsinline
-            ></video>
+          <!-- Project image -->
+          <div class="project-card-image">
             <img
-              v-else-if="projet.image"
               :src="projet.image"
               :alt="T.projets.items[index]?.titre"
-              class="projet-img"
-              @error="$event.target.src='assets/images/autres/circuit_embarque.png'"
+              loading="lazy"
             />
-            <div v-else class="projet-img projet-img-placeholder"></div>
-            <span v-if="projet.wip" class="projet-wip">{{ T.projets.wip }}</span>
           </div>
-          <div class="projet-content">
-            <div class="projet-cat">{{ projet.categorie }}</div>
-            <h3 class="projet-titre">
-              <router-link
-                v-if="projet.lien"
-                :to="projet.lien"
-                style="color:inherit;text-decoration:none;"
-              >{{ T.projets.items[index]?.titre }} <span style="color:var(--blue)">→</span></router-link>
-              <span v-else>{{ T.projets.items[index]?.titre }}</span>
-            </h3>
-            <p class="projet-desc">{{ T.projets.items[index]?.desc }}</p>
-            <div class="projet-tags">
-              <span
-                v-for="tag in projet.tags"
-                :key="tag.label"
-                class="tag"
-                :class="{ gold: tag.gold }"
-              >{{ tag.label }}</span>
+
+          <!-- Accent band -->
+          <div class="project-card-band" :style="{ background: projet.color }"></div>
+
+          <!-- Card body -->
+          <div class="project-card-body">
+            <span v-if="projet.wip" class="project-wip-badge">{{ T.projets.wip }}</span>
+            <div class="project-card-cat">{{ projet.categorie }}</div>
+            <div class="project-card-title">{{ T.projets.items[index]?.titre }}</div>
+            <p class="project-card-desc">{{ T.projets.items[index]?.desc }}</p>
+            <div class="project-card-footer">
+              <div class="project-card-tags">
+                <span
+                  v-for="tag in projet.tags"
+                  :key="tag.label"
+                  class="project-tag"
+                  :class="{ gold: tag.gold }"
+                >{{ tag.label }}</span>
+              </div>
+              <span v-if="projet.lien" class="project-card-arrow">→</span>
             </div>
           </div>
         </div>
