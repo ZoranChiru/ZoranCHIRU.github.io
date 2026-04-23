@@ -532,14 +532,16 @@ section.bg-alt {
 .project-card-wide .project-card-image {
   aspect-ratio: 21 / 9;
 }
-.project-card-image img {
+.project-card-image img,
+.project-card-image video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.55s ease;
 }
-.project-card:hover .project-card-image img {
+.project-card:hover .project-card-image img,
+.project-card:hover .project-card-image video {
   transform: scale(1.04);
 }
 
@@ -779,9 +781,24 @@ section.bg-alt {
    CONTACT + FOOTER
    ============================================ */
 #contact {
-  background: var(--color-bg-alt);
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-bg-alt);
   padding: var(--space-section) 4rem;
   text-align: center;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('images/autres/fleur2.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 55% auto;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
 .contact-headline {
@@ -944,7 +961,7 @@ section.bg-alt {
   padding-top: 2rem;
   border-top: 1px solid var(--color-border);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .contact-footer p {

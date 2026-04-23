@@ -38,7 +38,7 @@ const ProjectsSection = {
           categorie: 'Robotique industrielle',
           lien: null,
           color: '#f43f5e',
-          image: 'assets/images/automatismes/reseau_automatismes.png',
+          video: 'assets/videos/robotique.MP4',
           tags: [{ label: 'Bras robotique' }, { label: 'TP industriel' }, { label: 'Simulation' }]
         },
         {
@@ -63,7 +63,7 @@ const ProjectsSection = {
           categorie: 'Automatisme',
           lien: '/projets/grafcet',
           color: '#f97316',
-          image: 'assets/images/feu_tricolore/feu_tricolore.png',
+          video: 'assets/videos/feu_tricolore/feu_tricolore_auto.mp4',
           tags: [{ label: 'Grafcet' }, { label: 'Schneider' }, { label: 'PCB' }]
         },
         {
@@ -72,7 +72,7 @@ const ProjectsSection = {
           lien: '/projets/robot',
           color: '#eab308',
           wide: true,
-          image: 'assets/images/pilomo/robot-pilomo.png',
+          video: 'assets/videos/pilomo/robotsuiveurdeligne.MP4',
           tags: [{ label: '1er Prix', gold: true }, { label: 'Arduino' }, { label: 'C' }, { label: 'Électronique' }]
         },
         {
@@ -117,9 +117,15 @@ const ProjectsSection = {
           :class="{ 'no-link': !projet.lien, 'project-card-wide': projet.wide }"
           @click="navigate(projet.lien)"
         >
-          <!-- Project image -->
+          <!-- Project image or video -->
           <div class="project-card-image">
+            <video
+              v-if="projet.video"
+              :src="projet.video"
+              autoplay muted loop playsinline
+            ></video>
             <img
+              v-else
               :src="projet.image"
               :alt="T.projets.items[index]?.titre"
               loading="lazy"

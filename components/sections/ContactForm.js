@@ -167,7 +167,6 @@ const ContactForm = {
       <!-- Footer bar -->
       <div class="contact-footer reveal">
         <p>© 2026 Zoran Chiru — ENSICAEN GPSE</p>
-        <p>Built with Vue.js</p>
       </div>
 
     </section>
