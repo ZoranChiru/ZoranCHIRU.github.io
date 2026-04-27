@@ -38,7 +38,7 @@ const ProjectsSection = {
           categorie: 'Robotique industrielle',
           lien: null,
           color: '#f43f5e',
-          video: 'assets/videos/robotique.MP4',
+          video: 'assets/videos/robotique.mp4',
           poster: 'assets/images/autres/circuit_embarque.png',
           tags: [{ label: 'Bras robotique' }, { label: 'TP industriel' }, { label: 'Simulation' }]
         },
