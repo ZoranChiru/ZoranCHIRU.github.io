@@ -14,9 +14,9 @@ const Navbar = {
       isMobile: window.innerWidth <= 768,
       store,
       langs: [
-        { code: 'fr', label: 'FR' },
-        { code: 'en', label: 'EN' },
-        { code: 'ro', label: 'RO' }
+        { code: 'fr', label: 'FR', flag: 'https://flagcdn.com/24x18/fr.png' },
+        { code: 'en', label: 'EN', flag: 'https://flagcdn.com/24x18/gb.png' },
+        { code: 'ro', label: 'RO', flag: 'https://flagcdn.com/24x18/ro.png' }
       ],
       experiences_menu: {
         fr: [
@@ -176,15 +176,16 @@ const Navbar = {
 
       </div>
 
-      <!-- Language switcher — plain text -->
+      <!-- Language switcher — flags -->
       <div class="lang-switcher">
         <template v-for="(lang, i) in langs" :key="lang.code">
           <span v-if="i > 0" class="lang-divider"></span>
           <button
             class="lang-btn"
             :class="{ active: store.langue === lang.code }"
+            :title="lang.label"
             @click="store.setLangue(lang.code)"
-          >{{ lang.label }}</button>
+          ><img :src="lang.flag" :alt="lang.label" class="lang-flag" /></button>
         </template>
       </div>
 

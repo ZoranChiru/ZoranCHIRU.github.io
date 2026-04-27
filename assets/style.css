@@ -236,17 +236,23 @@ nav.scrolled {
 .lang-btn {
   background: transparent;
   border: none;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-family: var(--font-body);
-  font-weight: 400;
-  color: var(--color-text-muted);
+  padding: 3px 5px;
   cursor: pointer;
-  letter-spacing: 0.04em;
-  transition: color 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
 }
-.lang-btn:hover { color: var(--color-text); }
-.lang-btn.active { color: var(--color-text); font-weight: 500; }
+.lang-btn:hover { opacity: 0.9; transform: scale(1.1); }
+.lang-btn.active { opacity: 1; transform: scale(1.12); }
+
+.lang-flag {
+  width: 26px;
+  height: 19px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
 
 /* Burger */
 .burger {
@@ -881,17 +887,24 @@ section.bg-alt {
 
 /* CV link */
 .contact-cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
-  color: var(--color-text-muted);
+  font-weight: 500;
+  color: var(--color-text);
   text-decoration: none;
-  font-weight: 400;
-  display: inline-block;
+  padding: 11px 24px;
   margin-bottom: 4rem;
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
+  border: 1.5px solid var(--color-text);
+  border-radius: 100px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
 }
-.contact-cv-link:hover { color: var(--color-text); border-color: var(--color-text); }
+.contact-cv-link:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
 
 /* Contact form area */
 .contact-form-wrap {

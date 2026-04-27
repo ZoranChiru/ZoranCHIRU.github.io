@@ -39,6 +39,7 @@ const ProjectsSection = {
           lien: null,
           color: '#f43f5e',
           video: 'assets/videos/robotique.MP4',
+          poster: 'assets/images/autres/circuit_embarque.png',
           tags: [{ label: 'Bras robotique' }, { label: 'TP industriel' }, { label: 'Simulation' }]
         },
         {
@@ -122,7 +123,9 @@ const ProjectsSection = {
             <video
               v-if="projet.video"
               :src="projet.video"
+              :poster="projet.poster || ''"
               autoplay muted loop playsinline
+              preload="auto"
             ></video>
             <img
               v-else

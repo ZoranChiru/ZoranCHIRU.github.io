@@ -117,7 +117,7 @@ const translations = {
     contact: {
       eyebrow: 'Restons en contact',
       intro: 'Une opportunité à partager ?',
-      sub: 'Étudiant ingénieur à l\'ENSICAEN, passionné de systèmes embarqués et toujours à l\'affût des nouvelles technologies. Ouvert à tout échange enrichissant.',
+      sub: 'Étudiant ingénieur à l\'ENSICAEN, passionné de systèmes embarqués et toujours à l\'affût des nouvelles technologies.',
       dispo: 'Disponible · Ouvert aux opportunités',
       nom: 'Nom',
       email: 'Email',
@@ -307,7 +307,7 @@ const translations = {
     },
     hero: {
       tag: 'Embedded Systems Engineer',
-      desc: 'Engineering student at ENSICAEN — GPSE, passionate about embedded electronics, programming and new technologies. Currently looking for a minimum 9-week internship abroad.',
+      desc: 'Engineering student at ENSICAEN — GPSE, passionate about embedded electronics, programming and new technologies.',
       btn_projets: 'View my projects',
       btn_contact: 'Contact me',
       dispo: 'Available · Looking for a 9-week+ internship abroad'
@@ -403,7 +403,7 @@ const translations = {
     contact: {
       eyebrow: 'Let\'s connect',
       intro: 'Got an opportunity to share?',
-      sub: 'Engineering student at ENSICAEN, passionate about embedded systems and always keeping up with new technologies. Currently looking for a minimum 9-week internship abroad.',
+      sub: 'Engineering student at ENSICAEN, passionate about embedded systems and always keeping up with new technologies.',
       dispo: 'Available · Looking for a 9-week+ internship abroad',
       nom: 'Name',
       email: 'Email',
@@ -593,7 +593,7 @@ const translations = {
     },
     hero: {
       tag: 'Inginer sisteme incorporate',
-      desc: 'Student inginer la ENSICAEN — GPSE, pasionat de electronică încorporată, programare și tehnologii noi. În căutarea unui stagiu de minimum 9 săptămâni în străinătate.',
+      desc: 'Student inginer la ENSICAEN — GPSE, pasionat de electronică încorporată, programare și tehnologii noi.',
       btn_projets: 'Vezi proiectele mele',
       btn_contact: 'Contactează-mă',
       dispo: 'Disponibil · Caut un stagiu de min. 9 săptămâni în străinătate'
@@ -689,7 +689,7 @@ const translations = {
     contact: {
       eyebrow: 'Să rămânem în contact',
       intro: 'Ai o oportunitate de împărtășit?',
-      sub: 'Student inginer la ENSICAEN, pasionat de sisteme incorporate și mereu la curent cu noile tehnologii. În căutarea unui stagiu de minimum 9 săptămâni în străinătate.',
+      sub: 'Student inginer la ENSICAEN, pasionat de sisteme incorporate și mereu la curent cu noile tehnologii.',
       dispo: 'Disponibil · Caut un stagiu de min. 9 săptămâni în străinătate',
       nom: 'Nume',
       email: 'Email',
