@@ -25,7 +25,7 @@ const ExperienceNXP = {
           env_titre: 'Agile, Git, et beaucoup de Python',
           env_p: 'Le travail s\'organisait en sprints de deux semaines avec des revues régulières. Chaque fonctionnalité passait par une branche Git dédiée, une review de code, puis une intégration. Jira servait à suivre l\'avancement et documenter les décisions techniques.',
           photo_caption: 'Poste de travail — développement et validation firmware UWB/NFC',
-          nav_retour: '← ENSICAEN',
+          nav_retour: '← IFM Prover',
           nav_suivant: 'EDF →'
         },
         en: {
@@ -44,7 +44,7 @@ const ExperienceNXP = {
           env_titre: 'Agile, Git, and a lot of Python',
           env_p: 'Work was organized in two-week sprints with regular reviews. Each feature went through a dedicated Git branch, a code review, then integration. Jira tracked progress and documented technical decisions.',
           photo_caption: 'Workstation — UWB/NFC firmware development and validation',
-          nav_retour: '← ENSICAEN',
+          nav_retour: '← IFM Prover',
           nav_suivant: 'EDF →'
         },
         ro: {
@@ -63,7 +63,7 @@ const ExperienceNXP = {
           env_titre: 'Agile, Git și mult Python',
           env_p: 'Munca era organizată în sprinturi de două săptămâni cu revizuiri regulate. Fiecare funcționalitate trecea printr-o ramură Git dedicată, o revizuire de cod, apoi integrare. Jira urmărea progresul și documenta deciziile tehnice.',
           photo_caption: 'Stație de lucru — dezvoltare și validare firmware UWB/NFC',
-          nav_retour: '← ENSICAEN',
+          nav_retour: '← IFM Prover',
           nav_suivant: 'EDF →'
         }
       }[this.store.langue] || {}
@@ -76,7 +76,7 @@ const ExperienceNXP = {
       this.$router.push('/')
       setTimeout(() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' }), 100)
     },
-    goPrev() { this.$router.push('/experience/ensicaen') },
+    goPrev() { this.$router.push('/experience/ifm-prover') },
     goNext() { this.$router.push('/experience/edf') }
   },
   template: `

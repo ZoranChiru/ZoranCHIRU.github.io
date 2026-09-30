@@ -10,6 +10,7 @@ import ProjetNXP from '../projets/ProjetNXP.js'
 import ProjetBDE from '../projets/ProjetBDE.js'
 import ExperienceENSICAEN from '../experience/ExperienceENSICAEN.js'
 import ExperienceNXP from '../experience/ExperienceNXP.js'
+import ExperienceIFM from '../experience/ExperienceIFM.js'
 import ExperienceEDF from '../experience/ExperienceEDF.js'
 import ExperienceBUTGEII from '../experience/ExperienceBUT_GEII.js'
 
@@ -23,6 +24,7 @@ const routes = [
   { path: '/projets/nxp', component: ProjetNXP },
   { path: '/projets/bde', component: ProjetBDE },
   { path: '/experience/ensicaen', component: ExperienceENSICAEN },
+  { path: '/experience/ifm-prover', component: ExperienceIFM },
   { path: '/experience/nxp', component: ExperienceNXP },
   { path: '/experience/edf', component: ExperienceEDF },
   { path: '/experience/but-geii', component: ExperienceBUTGEII },

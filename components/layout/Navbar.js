@@ -21,18 +21,21 @@ const Navbar = {
       experiences_menu: {
         fr: [
           { label: 'ENSICAEN — École d\'ingénieur', lien: '/experience/ensicaen' },
+          { label: 'IFM Prover · Stage R&D', lien: '/experience/ifm-prover' },
           { label: 'NXP Semiconductors — Firmware', lien: '/experience/nxp' },
           { label: 'EDF CNPE Flamanville', lien: '/experience/edf' },
           { label: 'BUT GEII — IUT Cherbourg', lien: '/experience/but-geii' },
         ],
         en: [
           { label: 'ENSICAEN — Engineering school', lien: '/experience/ensicaen' },
+          { label: 'IFM Prover · R&D internship', lien: '/experience/ifm-prover' },
           { label: 'NXP Semiconductors — Firmware', lien: '/experience/nxp' },
           { label: 'EDF CNPE Flamanville', lien: '/experience/edf' },
           { label: 'BUT GEII — IUT Cherbourg', lien: '/experience/but-geii' },
         ],
         ro: [
           { label: 'ENSICAEN — Școală de inginerie', lien: '/experience/ensicaen' },
+          { label: 'IFM Prover · Stagiu R&D', lien: '/experience/ifm-prover' },
           { label: 'NXP Semiconductors — Firmware', lien: '/experience/nxp' },
           { label: 'EDF CNPE Flamanville', lien: '/experience/edf' },
           { label: 'BUT GEII — IUT Cherbourg', lien: '/experience/but-geii' },

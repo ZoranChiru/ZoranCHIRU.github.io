@@ -24,7 +24,7 @@ const ExperienceENSICAEN = {
           projet_titre: 'Distributeur automatique de croquettes',
           projet_p: 'Projet scolaire mené en équipe de 4 en parallèle des cours, conception d\'un distributeur automatique de nourriture pour chat, de la carte PCB à la programmation ESP32. La modélisation 3D du boîtier a été réalisée par un camarade, et Notion sert de plateforme de travail commune.',
           photo_caption: 'Campus ENSICAEN — Caen, Calvados',
-          nav_suivant: 'NXP →'
+          nav_suivant: 'IFM Prover →'
         },
         en: {
           badge: 'Engineering school · ENSICAEN · 2024 – 2027',
@@ -41,7 +41,7 @@ const ExperienceENSICAEN = {
           projet_titre: 'Automatic cat food dispenser',
           projet_p: 'School project built as a team of 4 alongside coursework, designing an automatic cat feeder from PCB to ESP32 programming. The 3D modeling of the casing was done by a teammate, and Notion serves as our shared workspace.',
           photo_caption: 'ENSICAEN campus — Caen, Calvados',
-          nav_suivant: 'NXP →'
+          nav_suivant: 'IFM Prover →'
         },
         ro: {
           badge: 'Școală de inginerie · ENSICAEN · 2024 – 2027',
@@ -58,7 +58,7 @@ const ExperienceENSICAEN = {
           projet_titre: 'Distribuitor automat de hrană pentru pisică',
           projet_p: 'Proiect școlar realizat în echipă de 4 în paralel cu cursurile, proiectarea unui distribuitor automat de hrană pentru pisică, de la PCB la programarea ESP32. Modelarea 3D a carcasei a fost realizată de un coleg, iar Notion servește ca platformă de lucru comună.',
           photo_caption: 'Campus ENSICAEN — Caen, Calvados',
-          nav_suivant: 'NXP →'
+          nav_suivant: 'IFM Prover →'
         }
       }[this.store.langue] || {}
     }
@@ -71,7 +71,7 @@ const ExperienceENSICAEN = {
       setTimeout(() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' }), 100)
     },
     goDistributeur() { this.$router.push('/projets/distributeur') },
-    goNext() { this.$router.push('/experience/nxp') }
+    goNext() { this.$router.push('/experience/ifm-prover') }
   },
   template: `
     <div class="projet-page">

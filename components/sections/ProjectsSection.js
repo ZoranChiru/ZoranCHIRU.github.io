@@ -7,12 +7,20 @@ const ProjectsSection = {
       store,
       projets: [
         {
+          num: '00',
+          categorie: 'Électronique · Stage IFM Prover',
+          lien: '/experience/ifm-prover',
+          color: '#a08872',
+          wide: true,
+          image: 'assets/images/IFM/smu_pcb_3d.jpg',
+          tags: [{ label: 'KiCad' }, { label: 'STM32' }, { label: 'INA228' }, { label: 'Python' }]
+        },
+        {
           num: '01',
           categorie: 'IoT / Embarqué',
           lien: '/projets/distributeur',
           wip: true,
           color: '#6366f1',
-          wide: true,
           image: 'assets/images/croquettes/3D_distributeur.png',
           tags: [{ label: 'ESP32' }, { label: 'C/C++' }, { label: 'Autonome' }]
         },
@@ -47,7 +55,6 @@ const ProjectsSection = {
           categorie: 'Automatisme industriel',
           lien: '/projets/automatismes',
           color: '#3b82f6',
-          wide: true,
           image: 'assets/images/automatismes/interface_automate.png',
           tags: [{ label: 'Automate' }, { label: 'IHM' }, { label: 'Réseau industriel' }]
         },

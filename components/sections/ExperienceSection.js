@@ -60,7 +60,7 @@ const ExperienceSection = {
             <div class="timeline-role">{{ exp.role }}</div>
             <div class="timeline-company">{{ exp.company }}</div>
             <div class="timeline-desc">{{ exp.desc }}</div>
-            <span v-if="exp.lien" class="timeline-voir">Voir le détail →</span>
+            <span v-if="exp.lien" class="timeline-voir">{{ T.experience.voir }}</span>
           </div>
         </div>
       </div>

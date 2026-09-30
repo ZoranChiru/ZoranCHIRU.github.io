@@ -1140,6 +1140,13 @@ section.bg-alt {
   display: flex; align-items: center; justify-content: center;
 }
 .clickable-img { cursor: pointer; }
+
+/* Schéma technique : affiché en entier sur fond clair, sans recadrage */
+.media-item.media-diagram { background: #f4f3ef; padding-bottom: 2.5rem; }
+.projet-split-img .media-item.media-diagram img { object-fit: contain; height: 300px; }
+.media-item.media-diagram:hover img { transform: none; }
+.media-item.media-wide { margin-top: 1.5rem; }
+.media-item.media-wide img { height: auto; }
 .clickable-img:hover img { opacity: 0.9; }
 
 .specs-grid {

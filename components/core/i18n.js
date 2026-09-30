@@ -10,6 +10,7 @@ const translations = {
       competences: 'Compétences',
       contact: 'Contact',
       projets_menu: [
+        { label: 'Carte de mesure SMU · IFM Prover', lien: '/experience/ifm-prover' },
         { label: 'Distributeur à croquettes', lien: '/projets/distributeur' },
         { label: 'Validation UWB / NFC — NXP', lien: '/projets/nxp' },
         { label: 'Automatismes BUT GEII', lien: '/projets/automatismes' },
@@ -31,6 +32,10 @@ const translations = {
       titre: 'Projets sélectionnés',
       wip: 'En cours',
       items: [
+        {
+          titre: 'Carte de mesure SMU · IFM Prover',
+          desc: 'Carte isolée qui mesure la tension et le courant sur les 4 fils d\'un capteur IO-Link, en mA et en µA, pour un banc de test HIL. Schéma et PCB 4 couches sous KiCad, STM32 et application Python. Conçue pendant mon stage à Sibiu.'
+        },
         {
           titre: 'Distributeur à croquettes',
           desc: 'Projet scolaire en équipe mené en parallèle des cours à l\'ENSICAEN, conception d\'un distributeur automatique de croquettes pour chat : PCB, programmation ESP32 et alimentation photovoltaïque.'
@@ -72,6 +77,7 @@ const translations = {
     experience: {
       eyebrow: 'Parcours',
       titre: 'Expériences & Formation',
+      voir: 'Voir le détail →',
       items: [
         {
           date: '2024 – 2027',
@@ -79,6 +85,13 @@ const translations = {
           role: 'École d\'ingénieur — GPSE',
           desc: 'Génie Physique et Systèmes Embarqués — électronique HF, STM32/FreeRTOS, systèmes temps réel, instrumentation, traitement du signal, conception PCB.',
           lien: '/experience/ensicaen'
+        },
+        {
+          date: 'Juil. – Sept. 2026',
+          company: 'IFM Prover · Sibiu, Roumanie',
+          role: 'Stagiaire R&D électronique',
+          desc: 'Conception d\'une carte de mesure tension et courant 4 voies, isolée, pour tester des capteurs IO-Link sur banc HIL. Schéma et PCB 4 couches sous KiCad, STM32, prototype sur Nucleo et application Python de mesure.',
+          lien: '/experience/ifm-prover'
         },
         {
           date: '2024 – 2025',
@@ -95,7 +108,7 @@ const translations = {
           lien: '/experience/edf'
         },
         {
-          date: 'Avr – Juin 2023',
+          date: 'Avril – Juin 2023',
           company: 'EDF CNPE Flamanville',
           role: 'Stagiaire — Service Conduite',
           desc: 'Conception et mise au point des vues industrielles de la salle de commande permettant une supervision à distance. Stage de fin de deuxième année de BUT GEII.',
@@ -296,6 +309,7 @@ const translations = {
       competences: 'Skills',
       contact: 'Contact',
       projets_menu: [
+        { label: 'SMU measurement board · IFM Prover', lien: '/experience/ifm-prover' },
         { label: 'Automatic cat feeder', lien: '/projets/distributeur' },
         { label: 'UWB / NFC Validation — NXP', lien: '/projets/nxp' },
         { label: 'Industrial automation — BUT GEII', lien: '/projets/automatismes' },
@@ -317,6 +331,10 @@ const translations = {
       titre: 'Selected projects',
       wip: 'In progress',
       items: [
+        {
+          titre: 'SMU measurement board · IFM Prover',
+          desc: 'Isolated board that measures voltage and current on the 4 wires of an IO-Link sensor, in mA and µA, for a HIL test bench. Schematic and 4 layer PCB in KiCad, STM32 and a Python app. Designed during my internship in Sibiu.'
+        },
         {
           titre: 'Automatic cat feeder',
           desc: 'Team school project at ENSICAEN — designing an automatic cat feeder from PCB layout to ESP32 programming and photovoltaic power supply.'
@@ -358,6 +376,7 @@ const translations = {
     experience: {
       eyebrow: 'Background',
       titre: 'Experience & Education',
+      voir: 'See details →',
       items: [
         {
           date: '2024 – 2027',
@@ -365,6 +384,13 @@ const translations = {
           role: 'Engineering school — GPSE',
           desc: 'Physical Engineering and Embedded Systems — RF electronics, STM32/FreeRTOS, real-time systems, instrumentation, signal processing, PCB design.',
           lien: '/experience/ensicaen'
+        },
+        {
+          date: 'Jul – Sep 2026',
+          company: 'IFM Prover · Sibiu, Romania',
+          role: 'R&D electronics intern',
+          desc: 'Design of an isolated 4 channel voltage and current measurement board for testing IO-Link sensors on a HIL bench. Schematic and 4 layer PCB in KiCad, STM32, Nucleo prototype and a Python measurement app.',
+          lien: '/experience/ifm-prover'
         },
         {
           date: '2024 – 2025',
@@ -582,6 +608,7 @@ const translations = {
       competences: 'Competențe',
       contact: 'Contact',
       projets_menu: [
+        { label: 'Placa de măsură SMU · IFM Prover', lien: '/experience/ifm-prover' },
         { label: 'Distribuitor automat hrană pisică', lien: '/projets/distributeur' },
         { label: 'Validare UWB / NFC — NXP', lien: '/projets/nxp' },
         { label: 'Automatizări BUT GEII', lien: '/projets/automatismes' },
@@ -603,6 +630,10 @@ const translations = {
       titre: 'Proiecte selectate',
       wip: 'În progres',
       items: [
+        {
+          titre: 'Placa de măsură SMU · IFM Prover',
+          desc: 'Placă izolată care măsoară tensiunea și curentul pe cele 4 fire ale unui senzor IO-Link, în mA și µA, pentru un banc de test HIL. Schemă și PCB pe 4 straturi în KiCad, STM32 și aplicație Python. Proiectată în timpul stagiului de la Sibiu.'
+        },
         {
           titre: 'Distribuitor automat hrană pisică',
           desc: 'Proiect școlar în echipă la ENSICAEN, proiectarea unui distribuitor automat de hrană pentru pisică: PCB, programare ESP32 și alimentare fotovoltaică.'
@@ -644,6 +675,7 @@ const translations = {
     experience: {
       eyebrow: 'Parcurs',
       titre: 'Experiență & Formare',
+      voir: 'Vezi detalii →',
       items: [
         {
           date: '2024 – 2027',
@@ -651,6 +683,13 @@ const translations = {
           role: 'Școală de inginerie — GPSE',
           desc: 'Inginerie Fizică și Sisteme Incorporate — electronică RF, STM32/FreeRTOS, sisteme în timp real, instrumentare, procesarea semnalelor, proiectare PCB.',
           lien: '/experience/ensicaen'
+        },
+        {
+          date: 'Iul – Sep 2026',
+          company: 'IFM Prover · Sibiu, România',
+          role: 'Stagiar R&D electronică',
+          desc: 'Proiectarea unei plăci izolate de măsurare a tensiunii și curentului pe 4 canale, pentru testarea senzorilor IO-Link pe banc HIL. Schemă și PCB pe 4 straturi în KiCad, STM32, prototip pe Nucleo și aplicație Python de măsură.',
+          lien: '/experience/ifm-prover'
         },
         {
           date: '2024 – 2025',
